@@ -13,7 +13,7 @@ public class ModItems {
             DeferredRegister.create(ForgeRegistries.ITEMS, Waste.MOD_ID);
 
     public static final RegistryObject<Item> GARBAGE = ITEMS.register("garbage",
-            () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.WASTE_TAB)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

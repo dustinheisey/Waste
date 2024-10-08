@@ -1,4 +1,7 @@
 {
-  "block.waste.garbage_block": "Garbage Block",
-  "item.waste.garbage": "Garbage"
+  "itemGroup.wastetab": "Waste",
+
+  "item.waste.garbage": "Garbage",
+
+  "block.waste.garbage_block": "Garbage Block"
 }

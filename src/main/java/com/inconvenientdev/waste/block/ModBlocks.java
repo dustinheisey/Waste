@@ -1,6 +1,7 @@
 package com.inconvenientdev.waste.block;
 
 import com.inconvenientdev.waste.Waste;
+import com.inconvenientdev.waste.item.ModCreativeModeTab;
 import com.inconvenientdev.waste.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
@@ -24,7 +25,7 @@ public class ModBlocks {
                     BlockBehaviour.Properties.of(Material.DIRT)
                             .strength(9f)
                             .requiresCorrectToolForDrops()
-            ), CreativeModeTab.TAB_MISC);
+            ), ModCreativeModeTab.WASTE_TAB);
 
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
