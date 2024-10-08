@@ -1,5 +1,6 @@
 package com.inconvenientdev.waste;
 
+import com.inconvenientdev.waste.block.ModBlocks;
 import com.inconvenientdev.waste.item.ModItems;
 import com.mojang.logging.LogUtils;
 import net.minecraft.world.level.block.Block;
@@ -34,6 +35,7 @@ public class Waste
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModItems.register(eventBus);
+        ModBlocks.register(eventBus);
 
         eventBus.addListener(this::setup);
 
