@@ -23,8 +23,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> GARBAGE_BLOCK = registerBlock("garbage_block",
             () -> new Block(
                     BlockBehaviour.Properties.of(Material.DIRT)
-                            .strength(9f)
-                            .requiresCorrectToolForDrops()
+                            .strength(0.5f)
             ), ModCreativeModeTab.WASTE_TAB);
 
 
