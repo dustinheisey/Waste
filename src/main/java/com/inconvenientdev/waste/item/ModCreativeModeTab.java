@@ -5,9 +5,7 @@ import net.minecraft.world.item.ItemStack;
 
 public class ModCreativeModeTab {
 
-  public static final CreativeModeTab WASTE_TAB = new CreativeModeTab(
-    "wastetab"
-  ) {
+  public static final CreativeModeTab WASTE_TAB = new CreativeModeTab("wastetab") {
     @Override
     public ItemStack makeIcon() {
       return new ItemStack(ModItems.GARBAGE.get());

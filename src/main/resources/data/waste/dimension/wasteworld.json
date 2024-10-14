@@ -1,0 +1,49 @@
+{
+  "type": "waste:wasteworld",
+  "generator": {
+    "type": "minecraft:noise",
+    "seed": 0,
+    "settings": "minecraft:overworld",
+    "biome_source": {
+      "type": "minecraft:multi_noise",
+      "biomes": [
+        {
+          "biome": "waste:garbage_dump",
+          "parameters": {
+            "temperature": 0.8,
+            "humidity": 0.3,
+            "continentalness": 0.9,
+            "erosion": 0.2,
+            "weirdness": 0.8,
+            "depth": -0.1,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "waste:garbage_patch",
+          "parameters": {
+            "temperature": 0.7,
+            "humidity": 0.9,
+            "continentalness": -0.7,
+            "erosion": 0.1,
+            "weirdness": 0.4,
+            "depth": -0.5,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "waste:trash_mountain",
+          "parameters": {
+            "temperature": 0.6,
+            "humidity": 0.3,
+            "continentalness": 0.6,
+            "erosion": 0.5,
+            "weirdness": 0.7,
+            "depth": 0.8,
+            "offset": 0.4
+          }
+        }
+      ]
+    }
+  }
+}
