@@ -1,0 +1,14 @@
+{
+  "name": "waste",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "format": "npx prettier --write \"**/*.java\""
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "prettier-plugin-java": "^2.6.4"
+  }
+}
