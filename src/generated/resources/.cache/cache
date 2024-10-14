@@ -3,7 +3,7 @@ eb4e5b4bea2a37e2823c00806e2ea403041f5c1b assets/waste/blockstates/dense_waste.js
 254672c4fcd7657355a958b86e49d745d21510e1 assets/waste/blockstates/solid_waste.json
 2ea8d2e70ecad37c245c21835b8c1fb77d69dcb9 assets/waste/blockstates/ultra_compacted_waste.json
 fd00de323867800f2491b176ea26d7188e97f14d assets/waste/blockstates/waste.json
-a778fe2b171f03d54415890aa6a59f80a36b6645 assets/waste/lang/en_us.json
+e55ad4ee31f32f21319daf54cc54c5be4335f4be assets/waste/lang/en_us.json
 9fc11161bbfd656c3813d9233bd1f47d965bf2f3 assets/waste/models/block/compacted_waste.json
 729896ebcba2c48ae4f04d3f8103700f9993eefc assets/waste/models/block/dense_waste.json
 d81e102c458564a2eeba0acc64ee51ca28ed3dfb assets/waste/models/block/solid_waste.json
@@ -35,6 +35,7 @@ f896042f2f47c951a6f5147c1a9fb34c1d07af39 assets/waste/models/item/paint_can.json
 c14e5a6f68ffe2fdbbe2d55dc9a1788a7ab77cf0 assets/waste/models/item/tin_can.json
 2c232cc8ddb0b2775ba51b815af31b38aaafd822 assets/waste/models/item/tin_foil.json
 13f7cae9ef9c69152da574f830aec3297106bbce assets/waste/models/item/toy.json
+f06c4ea06ffa5c21025f3a55d3a10c15b3684e2f assets/waste/models/item/trash_picker.json
 764d4ee4d4493bc1046d1ac3aed456378ab7379c assets/waste/models/item/ultra_compacted_waste.json
 f710f28954cae68aa35f9512a9b809d075148cb1 assets/waste/models/item/waste.json
 4a5849fd2d7f2514d86af263fb41b04ffa481f10 assets/waste/models/item/watch.json
@@ -54,7 +55,7 @@ c38ed055c25e0e3520e4afbdde812bba2b73909f data/minecraft/loot_tables/chests/jungl
 4a815e9dbd61a653d0b38cff611b8c9196b9122f data/minecraft/loot_tables/chests/pillager_outpost.json
 f3d43dcfa68d7e40cc27dfdf2dde26858200d5df data/minecraft/loot_tables/chests/ruined_portal.json
 d9598a875143dcae3886e35e68c8ccbddd58bc5a data/minecraft/loot_tables/chests/shipwreck_map.json
-74584b5e37f106e4190d4cb83aeec4467ab7792c data/minecraft/loot_tables/chests/shipwreck_supply.json
+e190e8dd6dac4cc58844774fedc02bd4631082db data/minecraft/loot_tables/chests/shipwreck_supply.json
 7d540d1159e539a2440c68c8a56336d0e463a59a data/minecraft/loot_tables/chests/shipwreck_treasure.json
 be578a7680273c0d55f23b1fdcfa1de858069ee4 data/minecraft/loot_tables/chests/simple_dungeon.json
 a6dbcad30a91b3c891ce50dd4d873d6d34e3a30d data/minecraft/loot_tables/chests/spawn_bonus_chest.json

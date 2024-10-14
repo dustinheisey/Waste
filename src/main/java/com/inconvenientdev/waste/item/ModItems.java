@@ -1,10 +1,12 @@
 package com.inconvenientdev.waste.item;
 
-import com.inconvenientdev.waste.Waste;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
+
+import com.inconvenientdev.waste.Waste;
+import com.inconvenientdev.waste.item.custom.TrashPickerItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -45,12 +47,23 @@ public class ModItems {
   public static final RegistryObject<Item> WATCH = registerItem("watch", "Broken Watch");
   public static final RegistryObject<Item> WRENCH = registerItem("wrench", "Rusty Wrench");
 
+  // Custom Items
+  public static final RegistryObject<Item> TRASH_PICKER = registerTrashPickerItem();
   // General method to register items
   private static RegistryObject<Item> registerItem(String name, String langTitle) {
     RegistryObject<Item> item = ITEMS.register(name, () ->
       new Item(new Item.Properties().tab(ModCreativeModeTab.WASTE_TAB))
     );
     ITEM_LANG_TITLES.put(item, langTitle);
+    ITEMS_WITH_MODELS.add(item);
+    return item;
+  }
+
+  private static RegistryObject<Item> registerTrashPickerItem() {
+    RegistryObject<Item> item = ITEMS.register("trash_picker", () ->
+        new TrashPickerItem(new Item.Properties().tab(ModCreativeModeTab.WASTE_TAB))
+    );
+    ITEM_LANG_TITLES.put(item, "Trash Picker");
     ITEMS_WITH_MODELS.add(item);
     return item;
   }
