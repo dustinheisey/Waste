@@ -34,78 +34,97 @@ public class WasteWorldBiomes
   private static void globalOverworldGeneration(BiomeGenerationSettings.Builder builder)
   {
     BiomeDefaultFeatures.addDefaultCarversAndLakes(builder);
-    BiomeDefaultFeatures.addDefaultCrystalFormations(builder);
-    BiomeDefaultFeatures.addDefaultMonsterRoom(builder);
     BiomeDefaultFeatures.addDefaultUndergroundVariety(builder);
     BiomeDefaultFeatures.addDefaultSprings(builder);
     BiomeDefaultFeatures.addSurfaceFreezing(builder);
   }
 
-  public static Biome dump()
+  public static Biome garbageDump()
   {
     MobSpawnSettings.Builder spawnBuilder = new MobSpawnSettings.Builder();
-    BiomeDefaultFeatures.desertSpawns(spawnBuilder);
+    spawnBuilder.addSpawn(MobCategory.MONSTER, new MobSpawnSettings.SpawnerData(EntityType.SLIME, 10, 1, 4)); // Toxic Slimes
+    spawnBuilder.addSpawn(MobCategory.MONSTER, new MobSpawnSettings.SpawnerData(EntityType.ZOMBIE, 10, 1, 4)); // Waste Crawlers
 
     BiomeGenerationSettings.Builder biomeBuilder = new BiomeGenerationSettings.Builder();
-    BiomeDefaultFeatures.addFossilDecoration(biomeBuilder);
     globalOverworldGeneration(biomeBuilder);
-    BiomeDefaultFeatures.addDefaultOres(biomeBuilder);
-    BiomeDefaultFeatures.addDefaultSoftDisks(biomeBuilder);
-    BiomeDefaultFeatures.addDefaultFlowers(biomeBuilder);
-    BiomeDefaultFeatures.addDefaultGrass(biomeBuilder);
-    BiomeDefaultFeatures.addDesertVegetation(biomeBuilder);
-    BiomeDefaultFeatures.addDefaultMushrooms(biomeBuilder);
-    BiomeDefaultFeatures.addDesertExtraVegetation(biomeBuilder);
-    BiomeDefaultFeatures.addDesertExtraDecoration(biomeBuilder);
-    return biome(Biome.Precipitation.NONE, Biome.BiomeCategory.DESERT, 2.0F, 0.0F, spawnBuilder, biomeBuilder, NORMAL_MUSIC);
+    // Add unique garbage blocks
+    //biomeBuilder.addFeature(GenerationStep.Decoration.SURFACE_STRUCTURES, WasteConfiguredFeatures.GARBAGE_HEAPS);
+
+    //BiomeDefaultFeatures.addDefaultSoftDisks(biomeBuilder);
+    //BiomeDefaultFeatures.addSwampClayDisk(biomeBuilder);
+    // Toxic pools and occasional garbage structures
+    //biomeBuilder.addFeature(GenerationStep.Decoration.LAKES, WasteConfiguredFeatures.TOXIC_SLUDGE_LAKE);
+    return biome(Biome.Precipitation.NONE, Biome.BiomeCategory.PLAINS, 1.5F, 0.0F, spawnBuilder, biomeBuilder, NORMAL_MUSIC);
   }
+
 
   public static Biome garbagePatch()
   {
     MobSpawnSettings.Builder spawnBuilder = new MobSpawnSettings.Builder();
-    spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.GOAT, 5, 1, 3));
-    BiomeDefaultFeatures.commonSpawns(spawnBuilder);
 
     BiomeGenerationSettings.Builder biomeBuilder = new BiomeGenerationSettings.Builder();
     globalOverworldGeneration(biomeBuilder);
-    BiomeDefaultFeatures.addFrozenSprings(biomeBuilder);
-    BiomeDefaultFeatures.addDefaultOres(biomeBuilder);
-    BiomeDefaultFeatures.addDefaultSoftDisks(biomeBuilder);
-    BiomeDefaultFeatures.addExtraEmeralds(biomeBuilder);
-    BiomeDefaultFeatures.addInfestedStone(biomeBuilder);
-    return biome(Biome.Precipitation.SNOW, Biome.BiomeCategory.MOUNTAIN, -0.7F, 0.9F, spawnBuilder, biomeBuilder, NORMAL_MUSIC);
+    // Floating plastic debris
+    //biomeBuilder.addFeature(GenerationStep.Decoration.SURFACE_STRUCTURES, WasteConfiguredFeatures.FLOATING_DEBRIS);
+    //biomeBuilder.addFeature(GenerationStep.Decoration.LAKES, WasteConfiguredFeatures.OIL_SLICKS);
+    return biome(Biome.Precipitation.RAIN, Biome.BiomeCategory.OCEAN, 0.2F, 0.9F, spawnBuilder, biomeBuilder, NORMAL_MUSIC);
   }
+
 
   public static Biome trashMountain()
   {
     MobSpawnSettings.Builder spawnBuilder = new MobSpawnSettings.Builder();
-    spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.GOAT, 5, 1, 3));
-    BiomeDefaultFeatures.commonSpawns(spawnBuilder);
+    spawnBuilder.addSpawn(MobCategory.MONSTER, new MobSpawnSettings.SpawnerData(EntityType.IRON_GOLEM, 5, 1, 1)); // Junk Beasts
+    spawnBuilder.addSpawn(MobCategory.MONSTER, new MobSpawnSettings.SpawnerData(EntityType.SKELETON, 5, 1, 4)); // Scavenger Ghouls
 
     BiomeGenerationSettings.Builder biomeBuilder = new BiomeGenerationSettings.Builder();
+
+    //BiomeDefaultFeatures.addDefaultSoftDisks(biomeBuilder);
+    //BiomeDefaultFeatures.addSwampClayDisk(biomeBuilder);
+
     globalOverworldGeneration(biomeBuilder);
-    BiomeDefaultFeatures.addFrozenSprings(biomeBuilder);
-    BiomeDefaultFeatures.addDefaultOres(biomeBuilder);
-    BiomeDefaultFeatures.addDefaultSoftDisks(biomeBuilder);
-    BiomeDefaultFeatures.addExtraEmeralds(biomeBuilder);
-    BiomeDefaultFeatures.addInfestedStone(biomeBuilder);
-    return biome(Biome.Precipitation.SNOW, Biome.BiomeCategory.MOUNTAIN, -0.7F, 0.9F, spawnBuilder, biomeBuilder, NORMAL_MUSIC);
+    // Towers of compacted trash
+    //biomeBuilder.addFeature(GenerationStep.Decoration.SURFACE_STRUCTURES, WasteConfiguredFeatures.TRASH_TOWERS);
+    return biome(Biome.Precipitation.NONE, Biome.BiomeCategory.MOUNTAIN, 0.8F, 0.1F, spawnBuilder, biomeBuilder, NORMAL_MUSIC);
   }
 
-  public static Biome garbageCave()
+
+  public static Biome abandonedCity()
   {
     MobSpawnSettings.Builder spawnBuilder = new MobSpawnSettings.Builder();
-    spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.GOAT, 5, 1, 3));
-    BiomeDefaultFeatures.commonSpawns(spawnBuilder);
+    spawnBuilder.addSpawn(MobCategory.MONSTER, new MobSpawnSettings.SpawnerData(EntityType.CREEPER, 10, 1, 2)); // Toxic Elementals
+    spawnBuilder.addSpawn(MobCategory.MONSTER, new MobSpawnSettings.SpawnerData(EntityType.SPIDER, 8, 1, 3)); // Mutant Rats
 
     BiomeGenerationSettings.Builder biomeBuilder = new BiomeGenerationSettings.Builder();
+
+    //BiomeDefaultFeatures.addDefaultSoftDisks(biomeBuilder);
+    //BiomeDefaultFeatures.addSwampClayDisk(biomeBuilder);
+
     globalOverworldGeneration(biomeBuilder);
-    BiomeDefaultFeatures.addFrozenSprings(biomeBuilder);
-    BiomeDefaultFeatures.addDefaultOres(biomeBuilder);
-    BiomeDefaultFeatures.addDefaultSoftDisks(biomeBuilder);
-    BiomeDefaultFeatures.addExtraEmeralds(biomeBuilder);
-    BiomeDefaultFeatures.addInfestedStone(biomeBuilder);
-    return biome(Biome.Precipitation.SNOW, Biome.BiomeCategory.MOUNTAIN, -0.7F, 0.9F, spawnBuilder, biomeBuilder, NORMAL_MUSIC);
+    // Toxic waste pools and ruins
+    //biomeBuilder.addFeature(GenerationStep.Decoration.LAKES, WasteConfiguredFeatures.TOXIC_WASTE_POOL);
+    //biomeBuilder.addFeature(GenerationStep.Decoration.SURFACE_STRUCTURES, WasteConfiguredFeatures.INDUSTRIAL_RUINS);
+    return biome(Biome.Precipitation.RAIN, Biome.BiomeCategory.DESERT, 0.8F, 0.5F, spawnBuilder, biomeBuilder, NORMAL_MUSIC);
   }
+
+
+  public static Biome industrialWaste()
+  {
+    MobSpawnSettings.Builder spawnBuilder = new MobSpawnSettings.Builder();
+    spawnBuilder.addSpawn(MobCategory.MONSTER, new MobSpawnSettings.SpawnerData(EntityType.CREEPER, 10, 1, 2)); // Toxic Elementals
+    spawnBuilder.addSpawn(MobCategory.MONSTER, new MobSpawnSettings.SpawnerData(EntityType.SPIDER, 8, 1, 3)); // Mutant Rats
+
+    BiomeGenerationSettings.Builder biomeBuilder = new BiomeGenerationSettings.Builder();
+
+    //BiomeDefaultFeatures.addDefaultSoftDisks(biomeBuilder);
+    //BiomeDefaultFeatures.addSwampClayDisk(biomeBuilder);
+
+    globalOverworldGeneration(biomeBuilder);
+    // Toxic waste pools and ruins
+    //biomeBuilder.addFeature(GenerationStep.Decoration.LAKES, WasteConfiguredFeatures.TOXIC_WASTE_POOL);
+    //biomeBuilder.addFeature(GenerationStep.Decoration.SURFACE_STRUCTURES, WasteConfiguredFeatures.INDUSTRIAL_RUINS);
+    return biome(Biome.Precipitation.RAIN, Biome.BiomeCategory.DESERT, 1.5F, 0.3F, spawnBuilder, biomeBuilder, NORMAL_MUSIC);
+  }
+
 }
 

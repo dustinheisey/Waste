@@ -1,0 +1,30 @@
+{
+  "outsidestyle": "outside",
+  "citybiomemultipliers": [
+    {
+      "multiplier": 0.0,
+      "biomes": {
+        "if_any": [
+          "waste:garbage_patch",
+          "waste:trash_mountain",
+          "waste:industrial_waste",
+          "waste:garbage_dump"
+        ]
+      }
+    },
+    {
+      "multiplier": 1.0,
+      "biomes": {
+        "if_any": [
+          "waste:abandoned_city"
+        ]
+      }
+    }
+  ],
+  "citystyles": [
+    {
+      "factor": 1.0,
+      "citystyle": "citystyle_waste"
+    }
+  ]
+}

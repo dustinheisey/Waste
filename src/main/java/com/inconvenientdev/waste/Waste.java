@@ -44,32 +44,9 @@ public class Waste {
   }
 
   private void clientSetup(final FMLClientSetupEvent event) {
-    /*
-      ItemBlockRenderTypes.setRenderLayer(ModBlocks.EBONY_DOOR.get(), RenderType.translucent());
-      ItemBlockRenderTypes.setRenderLayer(ModBlocks.EBONY_TRAPDOOR.get(), RenderType.translucent());
-
-      ItemBlockRenderTypes.setRenderLayer(ModBlocks.PINK_ROSE.get(), RenderType.cutout());
-      ItemBlockRenderTypes.setRenderLayer(ModBlocks.POTTED_PINK_ROSE.get(), RenderType.cutout());
-
-      ItemBlockRenderTypes.setRenderLayer(ModBlocks.WINTER_WINDOW.get(), RenderType.translucent());
-      ItemBlockRenderTypes.setRenderLayer(ModBlocks.CUCUMBER_PLANT.get(), RenderType.cutout());
-
-      ItemBlockRenderTypes.setRenderLayer(ModBlocks.EBONY_LEAVES.get(), RenderType.cutout());
-      ItemBlockRenderTypes.setRenderLayer(ModBlocks.EBONY_SAPLING.get(), RenderType.cutout());
-
-      ItemBlockRenderTypes.setRenderLayer(ModBlocks.GEM_CUTTING_STATION.get(), RenderType.translucent());
-     */
-    //ItemBlockRenderTypes.setRenderLayer(ModFluids.SLUDGE_BLOCK.get(), RenderType.translucent());
+    ItemBlockRenderTypes.setRenderLayer(ModFluids.SLUDGE_BLOCK.get(), RenderType.translucent());
     ItemBlockRenderTypes.setRenderLayer(ModFluids.SLUDGE_FLUID.get(), RenderType.translucent());
     ItemBlockRenderTypes.setRenderLayer(ModFluids.SLUDGE_FLOWING.get(), RenderType.translucent());
-
-
-    // ModItemProperties.addCustomItemProperties();
-
-    // MenuScreens.register(ModMenuTypes.GEM_CUTTING_STATION_MENU.get(), GemCuttingStationScreen::new);
-
-    // WoodType.register(ModWoodTypes.EBONY);
-    // BlockEntityRenderers.register(ModBlockEntities.SIGN_BLOCK_ENTITIES.get(), SignRenderer::new);
   }
 
 
@@ -77,7 +54,6 @@ public class Waste {
   {
     event.enqueueWork(() ->
     {
-      // Given we only add two biomes, we should keep our weight relatively low.
       Regions.register(new WasteRegion(new ResourceLocation(MOD_ID, "overworld"), 999999999));
 
       // Register our surface rules

@@ -37,7 +37,7 @@ public class ModFluids {
   public static final ForgeFlowingFluid.Properties SLUDGE_PROPERTIES = new ForgeFlowingFluid.Properties(
       SLUDGE_FLUID, SLUDGE_FLOWING, FluidAttributes.builder(WATER_STILL_RL, WATER_FLOWING_RL)
       .density(3000).luminosity(5).viscosity(6000).sound(SoundEvents.HONEY_DRINK).overlay(WATER_OVERLAY_RL)
-      .color(0xbffcba03)).slopeFindDistance(2).levelDecreasePerBlock(1)
+      .color(0xbf17090b)).slopeFindDistance(2).levelDecreasePerBlock(1)
       .block(ModFluids.SLUDGE_BLOCK).bucket(ModItems.SLUDGE_BUCKET);
 
   public static final RegistryObject<LiquidBlock> SLUDGE_BLOCK = ModBlocks.BLOCKS.register("sludge",
