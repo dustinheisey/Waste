@@ -162,6 +162,9 @@ repositories {
         name = "ModMaven"
         url = "https://modmaven.dev"
     }
+    maven {
+        url "https://cursemaven.com"
+    }
 
     // If you have mod jar dependencies in ./libs, you can declare them as a repository like so:
     // flatDir {
@@ -180,7 +183,9 @@ dependencies {
     // at runtime, use the full JEI jar for Forge
     runtimeOnly(fg.deobf("mezz.jei:jei-${mc_version}-forge:${jei_version}"))
     implementation fg.deobf("com.github.glitchfiend:TerraBlender-forge:${mc_version}-${terrablender_version}")
-
+    implementation fg.deobf("curse.maven:jade-324717:5079263")
+    implementation fg.deobf("curse.maven:the-lost-cities-269024:5368860")
+    implementation fg.deobf("curse.maven:world-stripper-250603:3670854")
     // implementation fg.deobf("com.tterrag.registrate:Registrate:MC${mc_version}-${registrate_version}") // Adds registrate as a dependency
 
     // Examples using mod jars from ./libs
