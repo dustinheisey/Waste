@@ -88,11 +88,7 @@ public class ModBlocks {
     String tool,
     String miningLevel
   ) {
-    RegistryObject<T> block = (RegistryObject<T>) registerBlock(
-      name,
-      () -> new Block(BlockBehaviour.Properties.of(material).strength(strength)),
-      tab
-    );
+    RegistryObject<T> block = (RegistryObject<T>) registerBlock(name, () -> new Block(BlockBehaviour.Properties.of(material).strength(strength)), tab);
 
     // Add block to respective data tracking sets
     BLOCKS_WITH_ITEM_MODELS.add(block); // Track blocks for item block models
