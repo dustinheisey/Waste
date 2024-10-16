@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "waste:waste",
+    "waste:dense_waste",
+    "waste:compacted_waste"
+  ]
+}

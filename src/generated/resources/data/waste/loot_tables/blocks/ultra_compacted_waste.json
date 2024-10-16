@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:air"
+          "name": "waste:ultra_compacted_waste"
         }
       ],
       "conditions": [
