@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "waste:block/sludge_fluid"
+    }
+  }
+}

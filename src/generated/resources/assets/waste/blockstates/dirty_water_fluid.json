@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "waste:block/dirty_water_fluid"
+    }
+  }
+}

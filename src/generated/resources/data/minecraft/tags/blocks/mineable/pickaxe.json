@@ -1,9 +1,0 @@
-{
-  "replace": false,
-  "values": [
-    "waste:compacted_waste",
-    "waste:dense_waste",
-    "waste:ultra_compacted_waste",
-    "waste:solid_waste"
-  ]
-}
