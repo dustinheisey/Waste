@@ -10,6 +10,7 @@ import com.inconvenientdev.waste.fluid.ModFluids;
 import com.inconvenientdev.waste.item.custom.TrashPickerItem;
 import net.minecraft.world.item.BucketItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.material.FlowingFluid;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -52,17 +53,10 @@ public class ModItems {
   // Custom Items
   public static final RegistryObject<Item> TRASH_PICKER = registerTrashPickerItem("trash_picker", "Trash Picker");
 
-  public static final RegistryObject<Item> DIRTY_WATER_BUCKET = ITEMS.register("dirty_water_bucket",
-      () -> new BucketItem(ModFluids.DIRTY_WATER_FLUID,
-          new Item.Properties().tab(ModCreativeModeTab.WASTE_TAB).stacksTo(1)));
 
-  public static final RegistryObject<Item> TOXIC_WASTE_BUCKET = ITEMS.register("toxic_waste_bucket",
-      () -> new BucketItem(ModFluids.TOXIC_WASTE_FLUID,
-          new Item.Properties().tab(ModCreativeModeTab.WASTE_TAB).stacksTo(1)));
-
-  public static final RegistryObject<Item> SLUDGE_BUCKET = ITEMS.register("sludge_bucket",
-      () -> new BucketItem(ModFluids.SLUDGE_FLUID,
-          new Item.Properties().tab(ModCreativeModeTab.WASTE_TAB).stacksTo(1)));
+  public static final RegistryObject<Item> DIRTY_WATER_BUCKET = registerBucketItem("dirty_water_bucket", "Dirty Water Bucket", ModFluids.DIRTY_WATER_FLUID);
+  public static final RegistryObject<Item> TOXIC_WASTE_BUCKET = registerBucketItem("toxic_waste_bucket", "Toxic Waste Bucket", ModFluids.TOXIC_WASTE_FLUID);
+  public static final RegistryObject<Item> SLUDGE_BUCKET = registerBucketItem("sludge_bucket", "Sludge Bucket", ModFluids.SLUDGE_FLUID);
 
   // General method to register items
   private static RegistryObject<Item> registerItem(String name, String langTitle) {
@@ -72,6 +66,16 @@ public class ModItems {
     ITEM_LANG_TITLES.put(item, langTitle);
     ITEMS_WITH_MODELS.add(item);
     return item;
+  }
+
+  private static RegistryObject<Item> registerBucketItem(String name, String langTitle, RegistryObject<FlowingFluid> fluid) {
+    RegistryObject<Item> bucket = ITEMS.register(name,
+        () -> new BucketItem(fluid,
+            new Item.Properties().tab(ModCreativeModeTab.WASTE_TAB).stacksTo(1)));
+
+    ITEM_LANG_TITLES.put(bucket, langTitle);
+    ITEMS_WITH_MODELS.add(bucket);
+    return bucket;
   }
 
   private static RegistryObject<Item> registerTrashPickerItem(String name, String langTitle) {

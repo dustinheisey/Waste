@@ -8,7 +8,7 @@
     "Properties": {
       "level": "0"
     },
-    "Name": "minecraft:water"
+    "Name": "waste:dirty_water"
   },
   "noise_router": {
     "final_density": {

@@ -49,20 +49,20 @@ public class ModFluids {
 
   public static final ForgeFlowingFluid.Properties DIRTY_WATER_PROPERTIES = new ForgeFlowingFluid.Properties(
       () -> DIRTY_WATER_FLUID.get(), () -> DIRTY_WATER_FLOWING.get(), FluidAttributes.builder(WATER_STILL_RL, WATER_FLOWING_RL)
-      .density(500).luminosity(5).viscosity(1000).sound(SoundEvents.AMBIENT_UNDERWATER_ENTER).overlay(WATER_OVERLAY_RL)
-      .color(0x338A4E1A)).slopeFindDistance(2).levelDecreasePerBlock(1)
+      .density(500).luminosity(0).viscosity(1000).sound(SoundEvents.AMBIENT_UNDERWATER_ENTER).overlay(WATER_OVERLAY_RL)
+      .color(0x99B78E5C)).slopeFindDistance(1).levelDecreasePerBlock(1)
       .block(() -> ModFluids.DIRTY_WATER_BLOCK.get()).bucket(() -> ModItems.DIRTY_WATER_BUCKET.get());
 
   public static final ForgeFlowingFluid.Properties TOXIC_WASTE_PROPERTIES = new ForgeFlowingFluid.Properties(
       () -> TOXIC_WASTE_FLUID.get(), () -> TOXIC_WASTE_FLOWING.get(), FluidAttributes.builder(WATER_STILL_RL, WATER_FLOWING_RL)
       .density(1000).luminosity(15).viscosity(2000).sound(SoundEvents.AMBIENT_UNDERWATER_ENTER).overlay(WATER_OVERLAY_RL)
-      .color(0xb343B610)).slopeFindDistance(2).levelDecreasePerBlock(1)
+      .color(0xb343B610)).slopeFindDistance(1).levelDecreasePerBlock(3)
       .block(() -> ModFluids.TOXIC_WASTE_BLOCK.get()).bucket(() -> ModItems.TOXIC_WASTE_BUCKET.get());
 
   public static final ForgeFlowingFluid.Properties SLUDGE_PROPERTIES = new ForgeFlowingFluid.Properties(
       () -> SLUDGE_FLUID.get(), () -> SLUDGE_FLOWING.get(), FluidAttributes.builder(WATER_STILL_RL, WATER_FLOWING_RL)
       .density(3000).luminosity(5).viscosity(6000).sound(SoundEvents.AMBIENT_UNDERWATER_ENTER).overlay(WATER_OVERLAY_RL)
-      .color(0xf208070B)).slopeFindDistance(2).levelDecreasePerBlock(1)
+      .color(0xf208070B)).slopeFindDistance(1).levelDecreasePerBlock(2)
       .block(() -> ModFluids.SLUDGE_BLOCK.get()).bucket(() -> ModItems.SLUDGE_BUCKET.get());
 
   public static final RegistryObject<LiquidBlock> DIRTY_WATER_BLOCK = ModBlocks.BLOCKS.register("dirty_water",
@@ -71,7 +71,7 @@ public class ModFluids {
 
   public static final RegistryObject<LiquidBlock> TOXIC_WASTE_BLOCK = ModBlocks.BLOCKS.register("toxic_waste",
       () -> new LiquidBlock(() -> ModFluids.TOXIC_WASTE_FLUID.get(), BlockBehaviour.Properties.of(Material.WATER)
-          .noCollission().strength(50f).noDrops()));
+          .noCollission().strength(100f).noDrops()));
 
   public static final RegistryObject<LiquidBlock> SLUDGE_BLOCK = ModBlocks.BLOCKS.register("sludge",
       () -> new LiquidBlock(() -> ModFluids.SLUDGE_FLUID.get(), BlockBehaviour.Properties.of(Material.LAVA)

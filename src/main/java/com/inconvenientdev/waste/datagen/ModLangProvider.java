@@ -16,6 +16,10 @@ public class ModLangProvider extends LanguageProvider {
     // Creative Tab translation (manual)
     addCreativeTab("wastetab", "Waste");
 
+    addFluid("dirty_water", "Dirty Water");
+    addFluid("toxic_waste", "Toxic Waste");
+    addFluid("sludge", "Sludge");
+
     // Dynamically generate item translations
 
     ModItems.ITEM_LANG_TITLES.forEach((item, title) -> add("item.waste." + item.getId().getPath(), title));
@@ -28,4 +32,10 @@ public class ModLangProvider extends LanguageProvider {
   protected void addCreativeTab(String key, String tooltip) {
     add("itemGroup." + key, tooltip);
   }
+
+  protected void addFluid(String key, String tooltip) {
+    add("fluid.waste." + key, tooltip);
+  }
+
+
 }
