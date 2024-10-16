@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "waste:dirty_water_fluid",
+    "waste:dirty_water_flowing",
+    "waste:toxic_waste_fluid",
+    "waste:toxic_waste_flowing",
+    "waste:sludge_fluid",
+    "waste:sludge_flowing"
+  ]
+}

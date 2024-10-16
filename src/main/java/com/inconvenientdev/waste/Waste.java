@@ -47,6 +47,14 @@ public class Waste {
     ItemBlockRenderTypes.setRenderLayer(ModFluids.SLUDGE_BLOCK.get(), RenderType.translucent());
     ItemBlockRenderTypes.setRenderLayer(ModFluids.SLUDGE_FLUID.get(), RenderType.translucent());
     ItemBlockRenderTypes.setRenderLayer(ModFluids.SLUDGE_FLOWING.get(), RenderType.translucent());
+
+    ItemBlockRenderTypes.setRenderLayer(ModFluids.TOXIC_WASTE_BLOCK.get(), RenderType.translucent());
+    ItemBlockRenderTypes.setRenderLayer(ModFluids.TOXIC_WASTE_FLUID.get(), RenderType.translucent());
+    ItemBlockRenderTypes.setRenderLayer(ModFluids.TOXIC_WASTE_FLOWING.get(), RenderType.translucent());
+
+    ItemBlockRenderTypes.setRenderLayer(ModFluids.DIRTY_WATER_BLOCK.get(), RenderType.translucent());
+    ItemBlockRenderTypes.setRenderLayer(ModFluids.DIRTY_WATER_FLUID.get(), RenderType.translucent());
+    ItemBlockRenderTypes.setRenderLayer(ModFluids.DIRTY_WATER_FLOWING.get(), RenderType.translucent());
   }
 
 
