@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "waste:block/electrical_wiring_block"
+    }
+  }
+}

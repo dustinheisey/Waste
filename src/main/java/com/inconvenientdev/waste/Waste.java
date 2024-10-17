@@ -7,6 +7,8 @@ import com.inconvenientdev.waste.world.WasteRegion;
 import com.inconvenientdev.waste.world.WasteSurfaceRuleData;
 import com.tterrag.registrate.Registrate;
 import com.tterrag.registrate.util.nullness.NonNullSupplier;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
@@ -56,6 +58,31 @@ public class Waste {
 
   private void clientSetup(final FMLClientSetupEvent event) {
     // Client-side setup code (e.g., render layers)
+    ItemBlockRenderTypes.setRenderLayer(ModBlocks.AMETHYST_RING_BLOCK.get(), RenderType.translucent());
+    ItemBlockRenderTypes.setRenderLayer(ModBlocks.BATTERY_BLOCK.get(), RenderType.translucent());
+    ItemBlockRenderTypes.setRenderLayer(ModBlocks.BULLET_BLOCK.get(), RenderType.translucent());
+    ItemBlockRenderTypes.setRenderLayer(ModBlocks.FILM_BLOCK.get(), RenderType.translucent());
+    ItemBlockRenderTypes.setRenderLayer(ModBlocks.CAR_PART_BLOCK.get(), RenderType.translucent());
+    ItemBlockRenderTypes.setRenderLayer(ModBlocks.CIRCUIT_BOARD_BLOCK.get(), RenderType.translucent());
+    ItemBlockRenderTypes.setRenderLayer(ModBlocks.COPPER_TUBING_BLOCK.get(), RenderType.translucent());
+    ItemBlockRenderTypes.setRenderLayer(ModBlocks.ELECTRICAL_WIRE_BLOCK.get(), RenderType.translucent());
+    ItemBlockRenderTypes.setRenderLayer(ModBlocks.FORK_BLOCK.get(), RenderType.translucent());
+    ItemBlockRenderTypes.setRenderLayer(ModBlocks.KEY_CHAIN_BLOCK.get(), RenderType.translucent());
+    ItemBlockRenderTypes.setRenderLayer(ModBlocks.LIGHT_BULB_BLOCK.get(), RenderType.translucent());
+    ItemBlockRenderTypes.setRenderLayer(ModBlocks.SYRINGE_BLOCK.get(), RenderType.translucent());
+    ItemBlockRenderTypes.setRenderLayer(ModBlocks.NAIL_BLOCK.get(), RenderType.translucent());
+    ItemBlockRenderTypes.setRenderLayer(ModBlocks.NECKLACE_BLOCK.get(), RenderType.translucent());
+    ItemBlockRenderTypes.setRenderLayer(ModBlocks.PAINT_CAN_BLOCK.get(), RenderType.translucent());
+    ItemBlockRenderTypes.setRenderLayer(ModBlocks.PIPE_BLOCK.get(), RenderType.translucent());
+    ItemBlockRenderTypes.setRenderLayer(ModBlocks.PLUMBING_JOINT_BLOCK.get(), RenderType.translucent());
+    ItemBlockRenderTypes.setRenderLayer(ModBlocks.RADIO_BLOCK.get(), RenderType.translucent());
+    ItemBlockRenderTypes.setRenderLayer(ModBlocks.SCRAP_METAL_BLOCK.get(), RenderType.translucent());
+    ItemBlockRenderTypes.setRenderLayer(ModBlocks.TIN_CAN_BLOCK.get(), RenderType.translucent());
+    ItemBlockRenderTypes.setRenderLayer(ModBlocks.TIN_FOIL_BLOCK.get(), RenderType.translucent());
+    ItemBlockRenderTypes.setRenderLayer(ModBlocks.WRENCH_BLOCK.get(), RenderType.translucent());
+    ItemBlockRenderTypes.setRenderLayer(ModBlocks.WATCH_BLOCK.get(), RenderType.translucent());
+    ItemBlockRenderTypes.setRenderLayer(ModBlocks.TOY_BLOCK.get(), RenderType.translucent());
+
   }
 
   private void commonSetup(final FMLCommonSetupEvent event) {

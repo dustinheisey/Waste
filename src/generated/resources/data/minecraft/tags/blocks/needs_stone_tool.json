@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
+    "waste:abandoned_crate",
+    "waste:assorted_plastic",
     "waste:waste",
     "waste:dense_waste",
     "waste:compacted_waste"

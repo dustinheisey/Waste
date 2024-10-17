@@ -33,5 +33,19 @@ public class ModItems {
   public static final ItemEntry<Item> WATCH = REGISTRATE.get().item("watch", Item::new).register();
   public static final ItemEntry<Item> WRENCH = REGISTRATE.get().item("wrench", Item::new).register();
 
+  // Scrap Armor
+  public static final ItemEntry<Item> SCRAP_HELMET = REGISTRATE.get().item("scrap_helmet", Item::new).register();
+  public static final ItemEntry<Item> SCRAP_CHESTPLATE = REGISTRATE.get().item("scrap_chestplate", Item::new).register();
+  public static final ItemEntry<Item> SCRAP_LEGGINGS = REGISTRATE.get().item("scrap_leggings", Item::new).register();
+  public static final ItemEntry<Item> SCRAP_BOOTS = REGISTRATE.get().item("scrap_boots", Item::new).register();
+
+  // Gas Mask
+  public static final ItemEntry<Item> FILTER_CASING = REGISTRATE.get().item("filter_casing", Item::new).register();
+  public static final ItemEntry<Item> CHARCOAL_FILTER = REGISTRATE.get().item("charcoal_filter", Item::new).register();
+  public static final ItemEntry<Item> LEATHER_FACEPLATE = REGISTRATE.get().item("leather_faceplate", Item::new).register();
+  public static final ItemEntry<Item> LEATHER_STRAPS = REGISTRATE.get().item("leather_straps", Item::new).register();
+  public static final ItemEntry<Item> BROKEN_GOGGLES = REGISTRATE.get().item("broken_goggles", Item::new).register();
+  public static final ItemEntry<Item> LEATHER_GAS_MASK = REGISTRATE.get().item("leather_gas_mask", Item::new).register();
+
   public static void register() {}
 }
