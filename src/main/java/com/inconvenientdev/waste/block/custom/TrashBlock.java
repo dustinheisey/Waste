@@ -7,21 +7,19 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import org.jetbrains.annotations.NotNull;
 
 public class TrashBlock extends Block {
 
   // Define a 1-pixel-high voxel shape for trash blocks
   private static final VoxelShape SHAPE = Shapes.box(0, 0, 0, 1, 1 / 16.0, 1); // 1-pixel height
 
+
   public TrashBlock(Properties properties) {
     super(properties);
   }
 
   @Override
-  public @NotNull VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
+  public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
     return SHAPE;
   }
-
-  // Optionally, you can override interaction behaviors here, if needed
 }
