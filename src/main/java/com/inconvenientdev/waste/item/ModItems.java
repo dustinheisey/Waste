@@ -6,7 +6,10 @@ import static com.inconvenientdev.waste.Waste.REGISTRATE;
 
 import com.inconvenientdev.waste.block.ModBlocks;
 import com.inconvenientdev.waste.item.custom.TrashItem;
+import com.inconvenientdev.waste.item.custom.armor.ModArmorMaterials;
 import com.tterrag.registrate.util.entry.ItemEntry;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 
@@ -40,11 +43,21 @@ public class ModItems {
   public static final ItemEntry<Item> GARBAGE = REGISTRATE.get().item("garbage", Item::new).register();
 
   // Scrap Armor
-  public static final ItemEntry<Item> SCRAP_HELMET = REGISTRATE.get().item("scrap_helmet", Item::new).register();
-  public static final ItemEntry<Item> SCRAP_CHESTPLATE = REGISTRATE.get().item("scrap_chestplate", Item::new).register();
-  public static final ItemEntry<Item> SCRAP_LEGGINGS = REGISTRATE.get().item("scrap_leggings", Item::new).register();
-  public static final ItemEntry<Item> SCRAP_BOOTS = REGISTRATE.get().item("scrap_boots", Item::new).register();
+  public static final ItemEntry<ArmorItem> SCRAP_HELMET = REGISTRATE.get()
+      .item("scrap_helmet", props -> new ArmorItem(ModArmorMaterials.SCRAP, EquipmentSlot.HEAD, props))
+      .register();
 
+  public static final ItemEntry<ArmorItem> SCRAP_CHESTPLATE = REGISTRATE.get()
+      .item("scrap_chestplate", props -> new ArmorItem(ModArmorMaterials.SCRAP, EquipmentSlot.CHEST, props))
+      .register();
+
+  public static final ItemEntry<ArmorItem> SCRAP_LEGGINGS = REGISTRATE.get()
+      .item("scrap_leggings", props -> new ArmorItem(ModArmorMaterials.SCRAP, EquipmentSlot.LEGS, props))
+      .register();
+
+  public static final ItemEntry<ArmorItem> SCRAP_BOOTS = REGISTRATE.get()
+      .item("scrap_boots", props -> new ArmorItem(ModArmorMaterials.SCRAP, EquipmentSlot.FEET, props))
+      .register();
   // Gas Mask
   public static final ItemEntry<Item> FILTER_CASING = REGISTRATE.get().item("filter_casing", Item::new).register();
   public static final ItemEntry<Item> CHARCOAL_FILTER = REGISTRATE.get().item("charcoal_filter", Item::new).register();
