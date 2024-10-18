@@ -8,32 +8,35 @@ import net.minecraft.world.level.levelgen.VerticalAnchor;
 
 public class WasteSurfaceRuleData
 {
-  private static final SurfaceRules.RuleSource WASTE = makeStateRule(ModBlocks.WASTE.get());
-  public static final SurfaceRules.RuleSource WASTE_LAYER = SurfaceRules.ifTrue(SurfaceRules.verticalGradient("waste_layer", VerticalAnchor.aboveBottom(224), VerticalAnchor.top()), WASTE);
-  private static final SurfaceRules.RuleSource DENSE_WASTE = makeStateRule(ModBlocks.DENSE_WASTE.get());
-  public static final SurfaceRules.RuleSource DENSE_WASTE_LAYER = SurfaceRules.ifTrue(SurfaceRules.verticalGradient("dense_waste_layer", VerticalAnchor.aboveBottom(160), VerticalAnchor.aboveBottom(208)), DENSE_WASTE);
-  private static final SurfaceRules.RuleSource COMPACTED_WASTE = makeStateRule(ModBlocks.COMPACTED_WASTE.get());
-  public static final SurfaceRules.RuleSource COMPACTED_WASTE_LAYER = SurfaceRules.ifTrue(SurfaceRules.verticalGradient("compacted_waste_layer", VerticalAnchor.aboveBottom(112), VerticalAnchor.aboveBottom(160)), COMPACTED_WASTE);
-  private static final SurfaceRules.RuleSource ULTRA_COMPACTED_WASTE = makeStateRule(ModBlocks.ULTRA_COMPACTED_WASTE.get());
-  public static final SurfaceRules.RuleSource ULTRA_COMPACTED_WASTE_LAYER = SurfaceRules.ifTrue(SurfaceRules.verticalGradient("ultra_compacted_waste_layer", VerticalAnchor.aboveBottom(64), VerticalAnchor.aboveBottom(112)), ULTRA_COMPACTED_WASTE);
-  private static final SurfaceRules.RuleSource SOLID_WASTE = makeStateRule(ModBlocks.SOLID_WASTE.get());
-  public static final SurfaceRules.RuleSource SOLID_WASTE_LAYER = SurfaceRules.ifTrue(SurfaceRules.verticalGradient("solid_waste_layer", VerticalAnchor.aboveBottom(5), VerticalAnchor.aboveBottom(64)), SOLID_WASTE);
+  public static final SurfaceRules.ConditionSource ABOVE_LOWEST = SurfaceRules.yBlockCheck(VerticalAnchor.absolute(-176),0);
+  public static final SurfaceRules.ConditionSource ABOVE_LOW = SurfaceRules.yBlockCheck(VerticalAnchor.absolute(-173),0);
+  public static final SurfaceRules.ConditionSource ABOVE_MEDIUM = SurfaceRules.yBlockCheck(VerticalAnchor.absolute(-96),0);
+  public static final SurfaceRules.ConditionSource ABOVE_HIGH = SurfaceRules.yBlockCheck(VerticalAnchor.absolute(-32),0);
+  public static final SurfaceRules.ConditionSource ABOVE_HIGHEST = SurfaceRules.yBlockCheck(VerticalAnchor.absolute(16),0);
+
   private static final SurfaceRules.RuleSource BEDROCK = SurfaceRules.state(Blocks.BEDROCK.defaultBlockState());
-  public static final SurfaceRules.RuleSource BEDROCK_FLOOR = SurfaceRules.ifTrue(SurfaceRules.verticalGradient("bedrock_floor", VerticalAnchor.bottom(), VerticalAnchor.aboveBottom(5)), BEDROCK);
+  public static final SurfaceRules.RuleSource BEDROCK_FLOOR = SurfaceRules.ifTrue(ABOVE_LOWEST, SurfaceRules.ifTrue(SurfaceRules.not(ABOVE_LOW), BEDROCK));
+
+  private static final SurfaceRules.RuleSource SOLID_WASTE = makeStateRule(ModBlocks.SOLID_WASTE.get());
+  public static final SurfaceRules.RuleSource SOLID_WASTE_LAYER = SurfaceRules.ifTrue(ABOVE_LOW, SurfaceRules.ifTrue(SurfaceRules.not(ABOVE_MEDIUM), SOLID_WASTE));
+
+  private static final SurfaceRules.RuleSource ULTRA_COMPACTED_WASTE = makeStateRule(ModBlocks.ULTRA_COMPACTED_WASTE.get());
+  public static final SurfaceRules.RuleSource ULTRA_COMPACTED_WASTE_LAYER = SurfaceRules.ifTrue(ABOVE_MEDIUM, SurfaceRules.ifTrue(SurfaceRules.not(ABOVE_HIGH), ULTRA_COMPACTED_WASTE));
+
+  private static final SurfaceRules.RuleSource COMPACTED_WASTE = makeStateRule(ModBlocks.COMPACTED_WASTE.get());
+  public static final SurfaceRules.RuleSource COMPACTED_WASTE_LAYER = SurfaceRules.ifTrue(ABOVE_HIGH, SurfaceRules.ifTrue(SurfaceRules.not(ABOVE_HIGHEST), COMPACTED_WASTE));
+
+  private static final SurfaceRules.RuleSource DENSE_WASTE = makeStateRule(ModBlocks.DENSE_WASTE.get());
+  public static final SurfaceRules.RuleSource DENSE_WASTE_LAYER = SurfaceRules.ifTrue(ABOVE_HIGHEST, DENSE_WASTE);
 
   public static SurfaceRules.RuleSource makeRules()
   {
-
-    // SurfaceRules.ConditionSource isAtOrAboveWaterLevel = SurfaceRules.waterBlockCheck(-1, 0);
-    // SurfaceRules.RuleSource wasteSurface = SurfaceRules.sequence(SurfaceRules.ifTrue(isAtOrAboveWaterLevel, WASTE), DENSE_WASTE);
-
     return SurfaceRules.sequence(
         BEDROCK_FLOOR,
         SOLID_WASTE_LAYER,
         ULTRA_COMPACTED_WASTE_LAYER,
         COMPACTED_WASTE_LAYER,
-        DENSE_WASTE_LAYER,
-        WASTE_LAYER
+        DENSE_WASTE_LAYER
     );
   }
 

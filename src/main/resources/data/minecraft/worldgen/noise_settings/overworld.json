@@ -4955,8 +4955,8 @@
         ]
       }
     },
-    "min_y": -160,
-    "height": 480,
+    "min_y": -176,
+    "height": 496,
     "sampling": {
       "xz_scale": 1.0,
       "y_scale": 1.0,
