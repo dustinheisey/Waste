@@ -160,7 +160,7 @@
     },
     {
       "char": "W",
-      "block": "minecraft:water"
+      "block": "waste:dirty_water"
     },
     {
       "char": "C",

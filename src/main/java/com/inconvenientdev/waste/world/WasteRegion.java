@@ -63,8 +63,6 @@ public class WasteRegion extends Region
       builder.replaceBiome(Biomes.DESERT , WasteBiomes.ABANDONED_CITY);
       builder.replaceBiome(Biomes.SAVANNA , WasteBiomes.ABANDONED_CITY);
 
-      builder.replaceBiome(Biomes.RIVER , WasteBiomes.GARBAGE_PATCH);
-      builder.replaceBiome(Biomes.FROZEN_RIVER , WasteBiomes.GARBAGE_PATCH);
       builder.replaceBiome(Biomes.BEACH , WasteBiomes.GARBAGE_PATCH);
       builder.replaceBiome(Biomes.SNOWY_BEACH , WasteBiomes.GARBAGE_PATCH);
       builder.replaceBiome(Biomes.STONY_SHORE , WasteBiomes.GARBAGE_PATCH);

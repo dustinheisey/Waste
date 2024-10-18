@@ -8,11 +8,11 @@ import net.minecraft.world.level.levelgen.VerticalAnchor;
 
 public class WasteSurfaceRuleData
 {
-  public static final SurfaceRules.ConditionSource ABOVE_LOWEST = SurfaceRules.yBlockCheck(VerticalAnchor.absolute(-176),0);
-  public static final SurfaceRules.ConditionSource ABOVE_LOW = SurfaceRules.yBlockCheck(VerticalAnchor.absolute(-173),0);
-  public static final SurfaceRules.ConditionSource ABOVE_MEDIUM = SurfaceRules.yBlockCheck(VerticalAnchor.absolute(-96),0);
-  public static final SurfaceRules.ConditionSource ABOVE_HIGH = SurfaceRules.yBlockCheck(VerticalAnchor.absolute(-32),0);
-  public static final SurfaceRules.ConditionSource ABOVE_HIGHEST = SurfaceRules.yBlockCheck(VerticalAnchor.absolute(16),0);
+  public static final SurfaceRules.ConditionSource ABOVE_LOWEST = SurfaceRules.yBlockCheck(VerticalAnchor.absolute(-64),0);
+  public static final SurfaceRules.ConditionSource ABOVE_LOW = SurfaceRules.yBlockCheck(VerticalAnchor.absolute(-61),0);
+  public static final SurfaceRules.ConditionSource ABOVE_MEDIUM = SurfaceRules.yBlockCheck(VerticalAnchor.absolute(-16),0);
+  public static final SurfaceRules.ConditionSource ABOVE_HIGH = SurfaceRules.yBlockCheck(VerticalAnchor.absolute(16),0);
+  public static final SurfaceRules.ConditionSource ABOVE_HIGHEST = SurfaceRules.yBlockCheck(VerticalAnchor.absolute(48),0);
 
   private static final SurfaceRules.RuleSource BEDROCK = SurfaceRules.state(Blocks.BEDROCK.defaultBlockState());
   public static final SurfaceRules.RuleSource BEDROCK_FLOOR = SurfaceRules.ifTrue(ABOVE_LOWEST, SurfaceRules.ifTrue(SurfaceRules.not(ABOVE_LOW), BEDROCK));
