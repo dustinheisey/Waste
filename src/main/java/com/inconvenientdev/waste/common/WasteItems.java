@@ -5,6 +5,7 @@ import java.util.function.Supplier;
 import static com.inconvenientdev.waste.Waste.REGISTRATE;
 
 import com.inconvenientdev.waste.common.item.FuelItem;
+import com.inconvenientdev.waste.common.item.TooltipItem;
 import com.inconvenientdev.waste.common.item.TrashItem;
 import com.tterrag.registrate.util.entry.ItemEntry;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -22,8 +23,16 @@ public class WasteItems {
       LEATHER_FACEPLATE = simple("leather_faceplate"),
       LEATHER_STRAPS = simple("leather_straps"),
       BROKEN_GOGGLES = simple("broken_goggles"),
-      LEATHER_GAS_MASK = simple("leather_gas_mask"),
       GARBAGE = simple("garbage");
+
+  // Tooltip
+  public static final ItemEntry<TooltipItem>
+      LEATHER_GAS_MASK = tooltip(
+      "leather_gas_mask",
+      "Leather Gas Mask",
+      "A protective mask crafted from leather.",
+      "Allows you to breathe in the industrial waste biome without taking damage.\nUse it to explore hazardous areas safely."
+  );
 
   // Trash
   public static final ItemEntry<TrashItem>
@@ -55,23 +64,48 @@ public class WasteItems {
   // Armors
   public static final ItemEntry<ArmorItem>[]
       SCRAP_ARMORS = armor("scrap", WasteArmors.SCRAP);
+
   // Foods
   public static final ItemEntry<Item>
     JERKY = food("jerky", 3, 0.3F, "Zombie Jerky");
+
   // Fuel Items
   public static ItemEntry<FuelItem>
-      OLD_TIRE = fuel("old_tire", 32000),
-      OILY_RAG = fuel("oily_rag", 64000);
+      OLD_TIRE = fuel("old_tire", 32000, "Old Tire"),
+      OILY_RAG = fuel("oily_rag", 64000, "Oily Rag");
 
+
+  // Helper Methods
   private static ItemEntry<Item> simple(String name) {
     return REGISTRATE.get().item(name, Item::new)
         .register();
   }
+  private static ItemEntry<Item> simple(String name, String langTitle) {
+    return REGISTRATE.get().item(name, Item::new)
+        .lang(langTitle)
+        .register();
+  }
+
+  private static ItemEntry<TooltipItem> tooltip(String name, String langTitle, String tooltip, String shiftTooltip) {
+    return REGISTRATE.get().item(name, TooltipItem::new)
+        .onRegister(i -> i.setTooltip(tooltip))
+        .onRegister(i -> i.setShiftTooltip(shiftTooltip))
+        .lang(langTitle)
+        .register();
+  }
+
   private static ItemEntry<FuelItem> fuel(String name, int burnTime) {
     return REGISTRATE.get().item(name, FuelItem::new)
         .onRegister(i -> i.setBurnTime(burnTime))
         .register();
   }
+  private static ItemEntry<FuelItem> fuel(String name, int burnTime, String langTitle) {
+    return REGISTRATE.get().item(name, FuelItem::new)
+        .onRegister(i -> i.setBurnTime(burnTime))
+        .lang(langTitle)
+        .register();
+  }
+
   private static ItemEntry<ArmorItem>[] armor(String name, ArmorMaterial armor) {
     ItemEntry<ArmorItem> HELMET = REGISTRATE.get()
         .item(name + "_helmet", props -> new ArmorItem(armor, EquipmentSlot.HEAD, props))
@@ -88,6 +122,7 @@ public class WasteItems {
 
     return new ItemEntry[]{HELMET, CHESTPLATE, LEGGINGS, BOOTS};
   }
+
   public static ItemEntry<TrashItem> trash(String name, Supplier<Block> blockSupplier) {
     return REGISTRATE.get().item(name, props -> new TrashItem(props, blockSupplier)).register();
   }
