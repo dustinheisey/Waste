@@ -1,10 +1,10 @@
 package com.inconvenientdev.waste;
 
-import com.inconvenientdev.waste.block.ModBlocks;
-import com.inconvenientdev.waste.fluid.ModFluids;
-import com.inconvenientdev.waste.item.ModItems;
-import com.inconvenientdev.waste.world.WasteRegion;
-import com.inconvenientdev.waste.world.WasteSurfaceRuleData;
+import com.inconvenientdev.waste.common.WasteBlocks;
+import com.inconvenientdev.waste.common.WasteFluids;
+import com.inconvenientdev.waste.common.WasteItems;
+import com.inconvenientdev.waste.common.world.WasteRegion;
+import com.inconvenientdev.waste.common.world.WasteSurfaceRuleData;
 import com.tterrag.registrate.Registrate;
 import com.tterrag.registrate.util.nullness.NonNullSupplier;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
@@ -31,7 +31,7 @@ public class Waste {
     @Override
     public ItemStack makeIcon() {
       // Ensure GARBAGE is registered before this is called
-      return new ItemStack(ModItems.GARBAGE.get());
+      return new ItemStack(WasteItems.GARBAGE.get());
     }
   };
 
@@ -48,9 +48,9 @@ public class Waste {
     eventBus.addListener(this::clientSetup);
 
     // Register mod content (items, blocks, fluids)
-    ModItems.register();
-    ModBlocks.register();
-    ModFluids.register();
+    WasteItems.register();
+    WasteBlocks.register();
+    WasteFluids.register();
 
     // Register for server and other game events
     MinecraftForge.EVENT_BUS.register(this);
@@ -58,30 +58,30 @@ public class Waste {
 
   private void clientSetup(final FMLClientSetupEvent event) {
     // Client-side setup code (e.g., render layers)
-    ItemBlockRenderTypes.setRenderLayer(ModBlocks.AMETHYST_RING_BLOCK.get(), RenderType.translucent());
-    ItemBlockRenderTypes.setRenderLayer(ModBlocks.BATTERY_BLOCK.get(), RenderType.translucent());
-    ItemBlockRenderTypes.setRenderLayer(ModBlocks.BULLET_BLOCK.get(), RenderType.translucent());
-    ItemBlockRenderTypes.setRenderLayer(ModBlocks.FILM_BLOCK.get(), RenderType.translucent());
-    ItemBlockRenderTypes.setRenderLayer(ModBlocks.CAR_PART_BLOCK.get(), RenderType.translucent());
-    ItemBlockRenderTypes.setRenderLayer(ModBlocks.CIRCUIT_BOARD_BLOCK.get(), RenderType.translucent());
-    ItemBlockRenderTypes.setRenderLayer(ModBlocks.COPPER_TUBING_BLOCK.get(), RenderType.translucent());
-    ItemBlockRenderTypes.setRenderLayer(ModBlocks.ELECTRICAL_WIRE_BLOCK.get(), RenderType.translucent());
-    ItemBlockRenderTypes.setRenderLayer(ModBlocks.FORK_BLOCK.get(), RenderType.translucent());
-    ItemBlockRenderTypes.setRenderLayer(ModBlocks.KEY_CHAIN_BLOCK.get(), RenderType.translucent());
-    ItemBlockRenderTypes.setRenderLayer(ModBlocks.LIGHT_BULB_BLOCK.get(), RenderType.translucent());
-    ItemBlockRenderTypes.setRenderLayer(ModBlocks.SYRINGE_BLOCK.get(), RenderType.translucent());
-    ItemBlockRenderTypes.setRenderLayer(ModBlocks.NAIL_BLOCK.get(), RenderType.translucent());
-    ItemBlockRenderTypes.setRenderLayer(ModBlocks.NECKLACE_BLOCK.get(), RenderType.translucent());
-    ItemBlockRenderTypes.setRenderLayer(ModBlocks.PAINT_CAN_BLOCK.get(), RenderType.translucent());
-    ItemBlockRenderTypes.setRenderLayer(ModBlocks.PIPE_BLOCK.get(), RenderType.translucent());
-    ItemBlockRenderTypes.setRenderLayer(ModBlocks.PLUMBING_JOINT_BLOCK.get(), RenderType.translucent());
-    ItemBlockRenderTypes.setRenderLayer(ModBlocks.RADIO_BLOCK.get(), RenderType.translucent());
-    ItemBlockRenderTypes.setRenderLayer(ModBlocks.SCRAP_METAL_BLOCK.get(), RenderType.translucent());
-    ItemBlockRenderTypes.setRenderLayer(ModBlocks.TIN_CAN_BLOCK.get(), RenderType.translucent());
-    ItemBlockRenderTypes.setRenderLayer(ModBlocks.TIN_FOIL_BLOCK.get(), RenderType.translucent());
-    ItemBlockRenderTypes.setRenderLayer(ModBlocks.WRENCH_BLOCK.get(), RenderType.translucent());
-    ItemBlockRenderTypes.setRenderLayer(ModBlocks.WATCH_BLOCK.get(), RenderType.translucent());
-    ItemBlockRenderTypes.setRenderLayer(ModBlocks.TOY_BLOCK.get(), RenderType.translucent());
+    ItemBlockRenderTypes.setRenderLayer(WasteBlocks.AMETHYST_RING_BLOCK.get(), RenderType.translucent());
+    ItemBlockRenderTypes.setRenderLayer(WasteBlocks.BATTERY_BLOCK.get(), RenderType.translucent());
+    ItemBlockRenderTypes.setRenderLayer(WasteBlocks.BULLET_BLOCK.get(), RenderType.translucent());
+    ItemBlockRenderTypes.setRenderLayer(WasteBlocks.FILM_BLOCK.get(), RenderType.translucent());
+    ItemBlockRenderTypes.setRenderLayer(WasteBlocks.CAR_PART_BLOCK.get(), RenderType.translucent());
+    ItemBlockRenderTypes.setRenderLayer(WasteBlocks.CIRCUIT_BOARD_BLOCK.get(), RenderType.translucent());
+    ItemBlockRenderTypes.setRenderLayer(WasteBlocks.COPPER_TUBING_BLOCK.get(), RenderType.translucent());
+    ItemBlockRenderTypes.setRenderLayer(WasteBlocks.ELECTRICAL_WIRE_BLOCK.get(), RenderType.translucent());
+    ItemBlockRenderTypes.setRenderLayer(WasteBlocks.FORK_BLOCK.get(), RenderType.translucent());
+    ItemBlockRenderTypes.setRenderLayer(WasteBlocks.KEY_CHAIN_BLOCK.get(), RenderType.translucent());
+    ItemBlockRenderTypes.setRenderLayer(WasteBlocks.LIGHT_BULB_BLOCK.get(), RenderType.translucent());
+    ItemBlockRenderTypes.setRenderLayer(WasteBlocks.SYRINGE_BLOCK.get(), RenderType.translucent());
+    ItemBlockRenderTypes.setRenderLayer(WasteBlocks.NAIL_BLOCK.get(), RenderType.translucent());
+    ItemBlockRenderTypes.setRenderLayer(WasteBlocks.NECKLACE_BLOCK.get(), RenderType.translucent());
+    ItemBlockRenderTypes.setRenderLayer(WasteBlocks.PAINT_CAN_BLOCK.get(), RenderType.translucent());
+    ItemBlockRenderTypes.setRenderLayer(WasteBlocks.PIPE_BLOCK.get(), RenderType.translucent());
+    ItemBlockRenderTypes.setRenderLayer(WasteBlocks.PLUMBING_JOINT_BLOCK.get(), RenderType.translucent());
+    ItemBlockRenderTypes.setRenderLayer(WasteBlocks.RADIO_BLOCK.get(), RenderType.translucent());
+    ItemBlockRenderTypes.setRenderLayer(WasteBlocks.SCRAP_METAL_BLOCK.get(), RenderType.translucent());
+    ItemBlockRenderTypes.setRenderLayer(WasteBlocks.TIN_CAN_BLOCK.get(), RenderType.translucent());
+    ItemBlockRenderTypes.setRenderLayer(WasteBlocks.TIN_FOIL_BLOCK.get(), RenderType.translucent());
+    ItemBlockRenderTypes.setRenderLayer(WasteBlocks.WRENCH_BLOCK.get(), RenderType.translucent());
+    ItemBlockRenderTypes.setRenderLayer(WasteBlocks.WATCH_BLOCK.get(), RenderType.translucent());
+    ItemBlockRenderTypes.setRenderLayer(WasteBlocks.TOY_BLOCK.get(), RenderType.translucent());
 
   }
 

@@ -1,4 +1,4 @@
-package com.inconvenientdev.waste.item.custom;
+package com.inconvenientdev.waste.common.item;
 
 import java.util.function.Supplier;
 

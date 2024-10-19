@@ -1,4 +1,4 @@
-package com.inconvenientdev.waste.world;
+package com.inconvenientdev.waste.common.world;
 
 import net.minecraft.world.level.biome.Biome;
 import net.minecraftforge.event.RegistryEvent;

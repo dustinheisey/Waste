@@ -1,4 +1,4 @@
-package com.inconvenientdev.waste.block.custom;
+package com.inconvenientdev.waste.common.block;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.BlockGetter;

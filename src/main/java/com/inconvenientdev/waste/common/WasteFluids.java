@@ -1,4 +1,4 @@
-package com.inconvenientdev.waste.fluid;
+package com.inconvenientdev.waste.common;
 
 import static com.inconvenientdev.waste.Waste.REGISTRATE;
 
@@ -7,7 +7,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraftforge.fluids.ForgeFlowingFluid;
 
-public class ModFluids {
+public class WasteFluids {
 
   // Fluid textures
   public static final ResourceLocation WATER_STILL_RL = new ResourceLocation("block/water_still");

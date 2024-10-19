@@ -192,14 +192,13 @@ dependencies {
     implementation fg.deobf("curse.maven:jade-324717:5079263")
     implementation fg.deobf("curse.maven:the-lost-cities-269024:5368860")
     implementation fg.deobf("curse.maven:world-stripper-250603:3670854")
+
     implementation fg.deobf("curse.maven:controlling-250398:4555742")
-    implementation fg.deobf("curse.maven:crafting-tweaks-233071:4939214")
     implementation fg.deobf("curse.maven:config-menus-forge-544048:3671318")
     implementation fg.deobf("curse.maven:thirst-was-taken-679270:5568693")
     implementation fg.deobf("curse.maven:cold-sweat-506194:5775335")
     implementation fg.deobf("curse.maven:pollution-of-the-realms-269973:5311223")
     implementation fg.deobf("curse.maven:charcoal-pit-3-632918:3948347")
-    implementation fg.deobf("curse.maven:balm-531761:4442615")
     implementation fg.deobf("curse.maven:forgeendertech-244844:5222239")
 
 

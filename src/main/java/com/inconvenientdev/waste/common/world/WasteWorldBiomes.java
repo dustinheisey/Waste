@@ -1,4 +1,4 @@
-package com.inconvenientdev.waste.world;
+package com.inconvenientdev.waste.common.world;
 
 import javax.annotation.Nullable;
 

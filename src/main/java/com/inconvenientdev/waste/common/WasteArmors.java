@@ -1,4 +1,4 @@
-package com.inconvenientdev.waste.item.custom.armor;
+package com.inconvenientdev.waste.common;
 
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
@@ -7,7 +7,7 @@ import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 
-public enum ModArmorMaterials implements ArmorMaterial {
+public enum WasteArmors implements ArmorMaterial {
   SCRAP("scrap", 15, new int[]{2, 5, 6, 2}, 9, SoundEvents.ARMOR_EQUIP_IRON, 0.0F, 0.1F, Ingredient.of(Items.IRON_INGOT));
 
   private static final int[] DURABILITY_PER_SLOT = new int[]{13, 15, 16, 11};
@@ -20,7 +20,7 @@ public enum ModArmorMaterials implements ArmorMaterial {
   private final float knockbackResistance;
   private final Ingredient repairIngredient;
 
-  ModArmorMaterials(String name, int durabilityMultiplier, int[] slotProtections, int enchantmentValue, SoundEvent sound, float toughness, float knockbackResistance, Ingredient repairIngredient) {
+  WasteArmors(String name, int durabilityMultiplier, int[] slotProtections, int enchantmentValue, SoundEvent sound, float toughness, float knockbackResistance, Ingredient repairIngredient) {
     this.name = name;
     this.durabilityMultiplier = durabilityMultiplier;
     this.slotProtections = slotProtections;
