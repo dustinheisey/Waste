@@ -195,6 +195,14 @@ dependencies {
     implementation fg.deobf("curse.maven:controlling-250398:4555742")
     implementation fg.deobf("curse.maven:config-menus-forge-544048:3671318")
 
+    implementation fg.deobf("curse.maven:ctm-267602:3933537")
+    implementation fg.deobf("curse.maven:geckolib-388172:4181370")
+    implementation fg.deobf("curse.maven:epic-fight-mod-405076:5593312")
+
+    implementation fg.deobf("curse.maven:theundead-479710:5231601")
+    implementation fg.deobf("curse.maven:chipped-456956:4293291")
+    implementation fg.deobf("curse.maven:architects-palette-433862:4957984")
+
 
     // Examples using mod jars from ./libs
     // implementation fg.deobf("blank:coolmod-${mc_version}:${coolmod_version}")

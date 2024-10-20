@@ -6,11 +6,11 @@
     },
     {
       "factor": 1,
-      "value": "minecraft:husk"
+      "value": "minecraft:skeleton"
     },
     {
       "factor": 1,
-      "value": "biomancy:flesh_blob"
+      "value": "minecraft:spider"
     }
   ]
 }

@@ -2,7 +2,7 @@
   "palette": [
     {
       "char": "@",
-      "block": "minecraft:stone_block",
+      "block": "minecraft:quartz_block",
       "damaged": "minecraft:iron_bars"
     }
   ]

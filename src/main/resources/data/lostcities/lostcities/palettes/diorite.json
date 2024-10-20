@@ -1,0 +1,24 @@
+{
+  "palette": [
+    {
+      "char": "X",
+      "block": "chipped:diorite_15",
+      "damaged": "minecraft:iron_bars"
+    },
+    {
+      "char": "$",
+      "block": "minecraft:smooth_stone_slab[type=double]",
+      "damaged": "minecraft:iron_bars"
+    },
+    {
+      "char": "#",
+      "block": "chipped:diorite_15",
+      "damaged": "minecraft:iron_bars"
+    },
+    {
+      "char": "}",
+      "block": "chipped:diorite_15",
+      "damaged": "minecraft:iron_bars"
+    }
+  ]
+}

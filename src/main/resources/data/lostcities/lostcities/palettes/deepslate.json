@@ -1,0 +1,24 @@
+{
+  "palette": [
+    {
+      "char": "X",
+      "block": "minecraft:deepslate_bricks",
+      "damaged": "minecraft:iron_bars"
+    },
+    {
+      "char": "$",
+      "block": "minecraft:smooth_stone_slab[type=double]",
+      "damaged": "minecraft:iron_bars"
+    },
+    {
+      "char": "#",
+      "block": "minecraft:deepslate_bricks",
+      "damaged": "minecraft:iron_bars"
+    },
+    {
+      "char": "}",
+      "block": "minecraft:deepslate_bricks",
+      "damaged": "minecraft:iron_bars"
+    }
+  ]
+}

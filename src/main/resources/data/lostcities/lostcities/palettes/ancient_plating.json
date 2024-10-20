@@ -1,0 +1,24 @@
+{
+  "palette": [
+    {
+      "char": "X",
+      "block": "architects_palette:ancient_plating",
+      "damaged": "minecraft:iron_bars"
+    },
+    {
+      "char": "$",
+      "block": "minecraft:smooth_stone_slab[type=double]",
+      "damaged": "minecraft:iron_bars"
+    },
+    {
+      "char": "#",
+      "block": "architects_palette:ancient_plating",
+      "damaged": "minecraft:iron_bars"
+    },
+    {
+      "char": "}",
+      "block": "architects_palette:ancient_plating",
+      "damaged": "minecraft:iron_bars"
+    }
+  ]
+}

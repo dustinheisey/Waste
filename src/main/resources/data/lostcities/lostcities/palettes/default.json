@@ -7,12 +7,21 @@
     },
     {
       "char": ";",
-      "block": "minecraft:crafting_table",
-      "damaged": "minecraft:iron_bars"
+      "block": "minecraft:furnace",
+      "damaged": "minecraft:iron_bars",
+      "tag": {
+        "Items": [
+          {
+            "Slot": 0,
+            "id": "minecraft:coal",
+            "Count": 10
+          }
+        ]
+      }
     },
     {
       "char": "Q",
-      "block": "minecraft:stone",
+      "block": "minecraft:quartz_block",
       "damaged": "minecraft:iron_bars"
     },
     {
@@ -31,7 +40,7 @@
     },
     {
       "char": "B",
-      "variant": "stonebrick",
+      "block": "minecraft:bricks",
       "damaged": "minecraft:iron_bars"
     },
     {
@@ -87,11 +96,11 @@
     },
     {
       "char": "(",
-      "block": "minecraft:stone_stairs[facing=north,half=bottom,shape=straight]"
+      "block": "minecraft:quartz_stairs[facing=north,half=bottom,shape=straight]"
     },
     {
       "char": ")",
-      "block": "minecraft:stone_stairs[facing=south,half=bottom,shape=straight]"
+      "block": "minecraft:quartz_stairs[facing=south,half=bottom,shape=straight]"
     },
     {
       "char": "/",

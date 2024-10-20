@@ -2,18 +2,14 @@
   "palette": [
     {
       "char": "+",
-      "block": "minecraft:air"
+      "block": "minecraft:magma_block"
     },
     {
       "char": "`",
-      "block": "minecraft:air"
+      "block": "minecraft:end_stone"
     },
     {
       "char": "a",
-      "block": "minecraft:air"
-    },
-    {
-      "char": "@",
       "block": "minecraft:air"
     }
   ]
