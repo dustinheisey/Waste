@@ -100,6 +100,7 @@ public class WasteBlocks {
           .sound(SoundType.GRAVEL))
       .tag(BlockTags.NEEDS_STONE_TOOL)
       .tag(BlockTags.MINEABLE_WITH_SHOVEL)
+      .tag(WasteTags.Blocks.WASTE)
       .register();
   public static final BlockEntry<Block> DENSE_WASTE = REGISTRATE.get().block("dense_waste", Block::new)
       .initialProperties(() -> Blocks.GRAVEL)
@@ -109,6 +110,7 @@ public class WasteBlocks {
           .sound(SoundType.GRAVEL))
       .tag(BlockTags.NEEDS_STONE_TOOL)
       .tag(BlockTags.MINEABLE_WITH_SHOVEL)
+      .tag(WasteTags.Blocks.WASTE)
       .register();
   public static final BlockEntry<Block> COMPACTED_WASTE = REGISTRATE.get().block("compacted_waste", Block::new)
       .initialProperties(() -> Blocks.STONE)
@@ -118,6 +120,7 @@ public class WasteBlocks {
           .sound(SoundType.STONE))
       .tag(BlockTags.NEEDS_STONE_TOOL)
       .tag(BlockTags.MINEABLE_WITH_PICKAXE)
+      .tag(WasteTags.Blocks.WASTE)
       .register();
   public static final BlockEntry<Block> ULTRA_COMPACTED_WASTE = REGISTRATE.get().block("ultra_compacted_waste", Block::new)
       .initialProperties(() -> Blocks.DEEPSLATE)
@@ -127,6 +130,7 @@ public class WasteBlocks {
           .sound(SoundType.DEEPSLATE))
       .tag(BlockTags.NEEDS_DIAMOND_TOOL)
       .tag(BlockTags.MINEABLE_WITH_PICKAXE)
+      .tag(WasteTags.Blocks.WASTE)
       .register();
   public static final BlockEntry<Block> SOLID_WASTE = REGISTRATE.get().block("solid_waste", Block::new)
       .initialProperties(() -> Blocks.OBSIDIAN)
@@ -136,6 +140,7 @@ public class WasteBlocks {
           .sound(SoundType.DEEPSLATE))
       .tag(BlockTags.NEEDS_DIAMOND_TOOL)
       .tag(BlockTags.MINEABLE_WITH_PICKAXE)
+      .tag(WasteTags.Blocks.WASTE)
       .register();
 
   public static BlockEntry<TrashBlock> registerTrash(String name, Supplier<Item> itemSupplier) {

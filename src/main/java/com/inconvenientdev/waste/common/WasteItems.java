@@ -124,7 +124,7 @@ public class WasteItems {
   }
 
   public static ItemEntry<TrashItem> trash(String name, Supplier<Block> blockSupplier) {
-    return REGISTRATE.get().item(name, props -> new TrashItem(props, blockSupplier)).register();
+    return REGISTRATE.get().item(name, props -> new TrashItem(props, blockSupplier)).tag(WasteTags.Items.TRASH).register();
   }
   public static ItemEntry<Item> food(String name, int nutrition, float saturation, String langTitle) {
     return REGISTRATE.get().item(name, Item::new)
