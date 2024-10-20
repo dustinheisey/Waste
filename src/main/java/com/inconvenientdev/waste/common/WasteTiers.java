@@ -9,7 +9,7 @@ public class WasteTiers {
       new ForgeTier(
           1,
           300,
-          0.5F,
+          2.0F,
           1,
           4,
           BlockTags.NEEDS_STONE_TOOL,

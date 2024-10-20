@@ -4,15 +4,14 @@ import java.util.function.Supplier;
 
 import static com.inconvenientdev.waste.Waste.REGISTRATE;
 
+import com.inconvenientdev.waste.Waste;
 import com.inconvenientdev.waste.common.item.FuelItem;
 import com.inconvenientdev.waste.common.item.TooltipItem;
 import com.inconvenientdev.waste.common.item.TrashItem;
 import com.tterrag.registrate.util.entry.ItemEntry;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.item.ArmorItem;
-import net.minecraft.world.item.ArmorMaterial;
-import net.minecraft.world.item.Item;
+import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.Block;
 
 public class WasteItems {
@@ -61,19 +60,22 @@ public class WasteItems {
       WATCH = trash("watch", () -> WasteBlocks.WATCH_BLOCK.get()),
       WRENCH = trash("wrench", () -> WasteBlocks.WRENCH_BLOCK.get());
 
+  // Tools
+  public static final ItemEntry<SwordItem> SCRAP_SWORD = sword("scrap_sword", WasteTiers.SCRAP_TIER, 1, -2.4F, 250);
+  public static final ItemEntry<PickaxeItem> SCRAP_PICKAXE = pickaxe("scrap_pickaxe", WasteTiers.SCRAP_TIER, 0, -2.8F, 250);
+  public static final ItemEntry<ShovelItem> SCRAP_SHOVEL = shovel("scrap_shovel", WasteTiers.SCRAP_TIER, 0, -3.0F, 250);
+  public static final ItemEntry<AxeItem> SCRAP_AXE = axe("scrap_axe", WasteTiers.SCRAP_TIER, 2, -3.1F, 250);
+
   // Armors
   public static final ItemEntry<ArmorItem>[]
       SCRAP_ARMORS = armor("scrap", WasteArmors.SCRAP);
-
   // Foods
   public static final ItemEntry<Item>
     JERKY = food("jerky", 3, 0.3F, "Zombie Jerky");
-
   // Fuel Items
   public static ItemEntry<FuelItem>
       OLD_TIRE = fuel("old_tire", 32000, "Old Tire"),
       OILY_RAG = fuel("oily_rag", 64000, "Oily Rag");
-
 
   // Helper Methods
   private static ItemEntry<Item> simple(String name) {
@@ -103,6 +105,39 @@ public class WasteItems {
     return REGISTRATE.get().item(name, FuelItem::new)
         .onRegister(i -> i.setBurnTime(burnTime))
         .lang(langTitle)
+        .register();
+  }
+
+  public static final ItemEntry<SwordItem> sword(String name, Tier tier, int damageModifier, float attackSpeedModifier, int durability) {
+    return REGISTRATE.get().item(name, props ->
+            new SwordItem(tier, damageModifier, attackSpeedModifier, new Item.Properties()))
+        .properties(props -> props.stacksTo(1).durability(durability))
+        .model((ctx, prov) -> prov.handheld(ctx::get))
+        .tab(() -> Waste.WASTE_TAB)
+        .register();
+  }
+  public static final ItemEntry<PickaxeItem> pickaxe(String name, Tier tier, int damageModifier, float attackSpeedModifier, int durability) {
+    return REGISTRATE.get().item(name, props ->
+            new PickaxeItem(tier, damageModifier, attackSpeedModifier, new Item.Properties()))
+        .properties(props -> props.stacksTo(1).durability(durability))
+        .model((ctx, prov) -> prov.handheld(ctx::get))
+        .tab(() -> Waste.WASTE_TAB)
+        .register();
+  }
+  public static final ItemEntry<ShovelItem> shovel(String name, Tier tier, int damageModifier, float attackSpeedModifier, int durability) {
+    return REGISTRATE.get().item(name, props ->
+            new ShovelItem(tier, damageModifier, attackSpeedModifier, new Item.Properties()))
+        .properties(props -> props.stacksTo(1).durability(durability))
+        .model((ctx, prov) -> prov.handheld(ctx::get))
+        .tab(() -> Waste.WASTE_TAB)
+        .register();
+  }
+  public static final ItemEntry<AxeItem> axe(String name, Tier tier, int damageModifier, float attackSpeedModifier, int durability) {
+    return REGISTRATE.get().item(name, props ->
+            new AxeItem(tier, damageModifier, attackSpeedModifier, new Item.Properties()))
+        .properties(props -> props.stacksTo(1).durability(durability))
+        .model((ctx, prov) -> prov.handheld(ctx::get))
+        .tab(() -> Waste.WASTE_TAB)
         .register();
   }
 
