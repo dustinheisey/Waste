@@ -4,10 +4,7 @@ import java.util.function.Supplier;
 
 import static com.inconvenientdev.waste.Waste.REGISTRATE;
 
-import com.inconvenientdev.waste.common.block.AbandonedCrateBlock;
-import com.inconvenientdev.waste.common.block.RustyCabinetBlock;
-import com.inconvenientdev.waste.common.block.TimeCapsuleBlock;
-import com.inconvenientdev.waste.common.block.TrashBlock;
+import com.inconvenientdev.waste.common.block.*;
 import com.tterrag.registrate.util.entry.BlockEntry;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.item.Item;
@@ -95,7 +92,7 @@ public class WasteBlocks {
       .tag(BlockTags.NEEDS_STONE_TOOL)
       .tag(BlockTags.MINEABLE_WITH_SHOVEL)
       .register();
-  public static final BlockEntry<Block> WASTE = REGISTRATE.get().block("waste", Block::new)
+  public static final BlockEntry<GarbageBlock> WASTE = REGISTRATE.get().block("waste", GarbageBlock::new)
       .initialProperties(() -> Blocks.GRAVEL)
       .simpleItem()
       .properties(p -> p.color(MaterialColor.COLOR_LIGHT_GRAY)
