@@ -15,63 +15,23 @@
     [
       {
         "factor": 1.0,
-        "palette": "onyx"
+        "palette": "corporate"
       },
       {
         "factor": 1.0,
-        "palette": "calcite"
+        "palette": "decay"
       },
       {
         "factor": 1.0,
-        "palette": "myonite"
+        "palette": "minimalist"
       },
       {
         "factor": 1.0,
-        "palette": "olivestone"
+        "palette": "overgrown"
       },
       {
         "factor": 1.0,
-        "palette": "stone"
-      },
-      {
-        "factor": 1.0,
-        "palette": "flint"
-      },
-      {
-        "factor": 1.0,
-        "palette": "dripstone"
-      },
-      {
-        "factor": 1.0,
-        "palette": "ancient_plating"
-      },
-      {
-        "factor": 1.0,
-        "palette": "hazard"
-      },
-      {
-        "factor": 1.0,
-        "palette": "blackstone"
-      },
-      {
-        "factor": 1.0,
-        "palette": "bricks"
-      },
-      {
-        "factor": 1.0,
-        "palette": "deepslate"
-      },
-      {
-        "factor": 1.0,
-        "palette": "diorite"
-      },
-      {
-      "factor": 1.0,
-      "palette": "granite"
-      },
-      {
-        "factor": 1.0,
-        "palette": "mossy"
+        "palette": "hazard_industrial"
       }
     ],
     [

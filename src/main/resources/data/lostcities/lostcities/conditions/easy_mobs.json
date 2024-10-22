@@ -1,0 +1,24 @@
+{
+  "values": [
+    {
+      "factor": 1,
+      "value": "minecraft:zombie"
+    },
+    {
+      "factor": 1,
+      "value": "minecraft:husk"
+    },
+    {
+      "factor": 1,
+      "value": "undead_revamp2:the_spitter"
+    },
+    {
+      "factor": 1,
+      "value": "undead_revamp2:the_moonflower"
+    },
+    {
+      "factor": 1,
+      "value": "undead_revamp2:bomber"
+    }
+  ]
+}

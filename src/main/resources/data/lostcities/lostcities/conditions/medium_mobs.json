@@ -1,0 +1,20 @@
+{
+  "values": [
+    {
+      "factor": 1,
+      "value": "undead_revamp2:thehunter"
+    },
+    {
+      "factor": 1,
+      "value": "undead_revamp2:thesmoker"
+    },
+    {
+      "factor": 1,
+      "value": "undead_revamp2:therod"
+    },
+    {
+      "factor": 1,
+      "value": "undead_revamp2:thehorrors"
+    }
+  ]
+}
