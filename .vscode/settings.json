@@ -15,5 +15,6 @@
         "docs/notes/assets": false,
         "docs/notes/root.schema.yml": false,
         "package-lock.json": false
-    }
+    },
+    "java.checkstyle.configuration": "/google_checks.xml",
 }

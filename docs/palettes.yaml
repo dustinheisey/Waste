@@ -1,0 +1,23 @@
+palletes:
+  a: main block
+  b: first trim y
+  c: first trim x
+  d: first trim z
+  e: second trim y
+  f: second trim x
+  g: second trim z
+  h: glass
+  i: accent
+  j: garbage
+  k: garbage item
+  l: spawner easy
+  m: spawner medium
+  n: spawner hard
+  o: spawner blob
+  p: torch 1
+  q: torch 2
+  r: torch 3
+  s: torch 4
+  t: sign
+  u: chest
+
