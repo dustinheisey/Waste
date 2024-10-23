@@ -86,11 +86,11 @@
       "block": "minecraft:stone_brick_stairs[facing=north,half=bottom,shape=straight]"
     },
     {
-      "char": "c",
+      "char": "6",
       "block": "minecraft:stone_brick_stairs[facing=south,half=bottom,shape=straight]"
     },
     {
-      "char": "d",
+      "char": "5",
       "block": "minecraft:stone_brick_stairs[facing=north,half=top,shape=straight]"
     },
     {

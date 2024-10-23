@@ -1,8 +1,8 @@
 palletes:
-  a: main block
-  b: first trim y
-  c: first trim x
-  d: first trim z
+  a: main block X
+  b: first trim y X
+  c: first trim x X
+  d: first trim z X
   e: second trim y
   f: second trim x
   g: second trim z

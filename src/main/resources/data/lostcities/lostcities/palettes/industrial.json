@@ -40,10 +40,6 @@
         "block": "architects_palette:hazard_block"
       },
       {
-        "char": "o",
-        "block": "architects_palette:flint_pillar[facing=south]"
-      },
-      {
         "char": "j",
         "block": "waste:broken_glass"
       },
@@ -54,14 +50,6 @@
       {
         "char": "r",
         "block": "architects_palette:flint_pillar[facing=north]"
-      },
-      {
-        "char": "n",
-        "block": "architects_palette:flint_pillar[facing=west]"
-      },
-      {
-        "char": "i",
-        "block": "architects_palette:flint_pillar[facing=down]"
       },
       {
         "char": "s",

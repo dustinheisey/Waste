@@ -1,9 +1,0 @@
-{
-  "palette": [
-    {
-      "char": "@",
-      "block": "minecraft:smooth_stone_slab[type=double]",
-      "damaged": "minecraft:iron_bars"
-    }
-  ]
-}
