@@ -6,6 +6,26 @@
       "damaged": "minecraft:iron_bars"
     },
     {
+      "char": "b",
+      "variant": "stonebrick",
+      "damaged": "minecraft:iron_bars"
+    },
+    {
+      "char": "c",
+      "variant": "stonebrick",
+      "damaged": "minecraft:iron_bars"
+    },
+    {
+      "char": "d",
+      "variant": "stonebrick",
+      "damaged": "minecraft:iron_bars"
+    },
+    {
+      "char": "e",
+      "block": "minecraft:spawner",
+      "mob": "medium_mobs"
+    },
+    {
       "char": "$",
       "block": "minecraft:smooth_stone_slab[type=double]",
       "damaged": "minecraft:iron_bars"

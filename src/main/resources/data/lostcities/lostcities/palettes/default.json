@@ -21,7 +21,7 @@
     },
     {
       "char": "Q",
-      "block": "minecraft:quartz_block",
+      "block": "waste:waste",
       "damaged": "minecraft:iron_bars"
     },
     {
@@ -35,13 +35,12 @@
       "damaged": "minecraft:iron_bars"
     },
     {
-      "char": "b",
+      "char": "f",
       "block": "minecraft:structure_void"
     },
     {
-      "char": "B",
-      "block": "minecraft:bricks",
-      "damaged": "minecraft:iron_bars"
+      "char": "F",
+      "block": "waste:waste"
     },
     {
       "char": "v",

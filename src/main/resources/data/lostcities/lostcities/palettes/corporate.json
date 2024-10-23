@@ -6,8 +6,28 @@
       "damaged": "minecraft:iron_bars"
     },
     {
+      "char": "b",
+      "block": "architects_palette:onyx_pillar[axis=y]",
+      "damaged": "minecraft:iron_bars"
+    },
+    {
+      "char": "c",
+      "block": "architects_palette:onyx_pillar[axis=x]",
+      "damaged": "minecraft:iron_bars"
+    },
+    {
+      "char": "d",
+      "block": "architects_palette:onyx_pillar[axis=z]",
+      "damaged": "minecraft:iron_bars"
+    },
+    {
+      "char": "e",
+      "block": "minecraft:spawner",
+      "mob": "medium_mobs"
+    },
+    {
       "char": "$",
-      "block": "minecraft:smooth_stone_slab[type=double]",
+      "block": "architects_palette:calcite_pillar[axis=x]",
       "damaged": "minecraft:iron_bars"
     },
     {

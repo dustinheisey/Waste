@@ -10,8 +10,8 @@
     "border": "y",
     "wall": "w",
     "street": "S",
-    "streetbase": "b",
-    "streetvariant": "B",
+    "streetbase": "f",
+    "streetvariant": "F",
     "width": 3
   },
   "parkblocks": {
@@ -27,7 +27,7 @@
   "sphereblocks": {
     "glass": "Z",
     "border": "9",
-    "inner": "b"
+    "inner": "f"
   },
   "selectors": {
     "buildings": [

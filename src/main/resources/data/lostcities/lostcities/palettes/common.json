@@ -3,12 +3,12 @@
     {
       "char": "1",
       "block": "minecraft:spawner",
-      "mob": "easymobs"
+      "mob": "easy_mobs"
     },
     {
       "char": "4",
       "block": "minecraft:spawner",
-      "mob": "hardmobs"
+      "mob": "hard_mobs"
     },
     {
       "char": "T",
@@ -46,55 +46,54 @@
     },
     {
       "char": "Y",
-      "block": "minecraft:white_stained_glass"
+      "block": "waste:broken_glass"
     },
     {
       "char": "Z",
-      "blocks": [
-        {
-          "random": 32,
-          "block": "minecraft:glass"
-        },
-        {
-          "random": 32,
-          "block": "minecraft:gray_stained_glass"
-        },
-        {
-          "random": 32,
-          "block": "minecraft:blue_stained_glass"
-        },
-        {
-          "random": 1000,
-          "block": "minecraft:light_blue_stained_glass"
-        }
-      ]
+      "block": "waste:broken_glass"
     },
     {
       "char": "p",
       "blocks": [
         {
           "random": 30,
-          "block": "minecraft:poppy"
+          "block": "waste:amethyst_ring_block"
         },
         {
           "random": 30,
-          "block": "minecraft:dandelion"
+          "block": "waste:film_block"
         },
         {
           "random": 15,
-          "block": "minecraft:oak_sapling[stage=1]"
+          "block": "waste:watch_block"
         },
         {
           "random": 15,
-          "block": "minecraft:spruce_sapling[stage=1]"
+          "block": "waste:toy_block"
         },
         {
           "random": 15,
-          "block": "minecraft:birch_sapling[stage=1]"
+          "block": "waste:light_bulb_block"
         },
         {
-          "random": 1000,
-          "block": "minecraft:acacia_sapling[stage=1]"
+          "random": 15,
+          "block": "waste:necklace_block"
+        },
+        {
+          "random": 15,
+          "block": "waste:syringe_block"
+        },
+        {
+          "random": 15,
+          "block": "waste:fork_block"
+        },
+        {
+          "random": 15,
+          "block": "waste:battery_block"
+        },
+        {
+          "random": 15,
+          "block": "waste:paint_can_block"
         }
       ]
     },
@@ -102,75 +101,62 @@
       "char": "K",
       "blocks": [
         {
-          "random": 64,
-          "block": "minecraft:poppy"
+          "random": 30,
+          "block": "waste:amethyst_ring_block"
         },
         {
-          "random": 1000,
-          "block": "minecraft:dandelion"
+          "random": 30,
+          "block": "waste:film_block"
+        },
+        {
+          "random": 15,
+          "block": "waste:watch_block"
+        },
+        {
+          "random": 15,
+          "block": "waste:toy_block"
+        },
+        {
+          "random": 15,
+          "block": "waste:light_bulb_block"
+        },
+        {
+          "random": 15,
+          "block": "waste:necklace_block"
+        },
+        {
+          "random": 15,
+          "block": "waste:syringe_block"
+        },
+        {
+          "random": 15,
+          "block": "waste:fork_block"
+        },
+        {
+          "random": 15,
+          "block": "waste:battery_block"
+        },
+        {
+          "random": 15,
+          "block": "waste:paint_can_block"
         }
       ]
     },
     {
-      "char": "!",
-      "blocks": [
-        {
-          "random": 15,
-          "block": "minecraft:diamond_block"
-        },
-        {
-          "random": 20,
-          "block": "minecraft:gold_block"
-        },
-        {
-          "random": 15,
-          "block": "minecraft:emerald_block"
-        },
-        {
-          "random": 1000,
-          "block": "minecraft:iron_block"
-        }
-      ]
+      "char": "|",
+      "block": "minecraft:spawner",
+      "mob": "hard_mobs"
     },
     {
       "char": "F",
-      "blocks": [
-        {
-          "random": 25,
-          "block": "minecraft:furnace[facing=north]"
-        },
-        {
-          "random": 20,
-          "block": "minecraft:crafting_table"
-        },
-        {
-          "random": 7,
-          "block": "minecraft:brewing_stand"
-        },
-        {
-          "random": 6,
-          "block": "minecraft:anvil[facing=north]"
-        },
-        {
-          "random": 5,
-          "block": "minecraft:cauldron"
-        },
-        {
-          "random": 2,
-          "block": "minecraft:enchanting_table"
-        },
-        {
-          "random": 1000,
-          "block": "minecraft:cobweb"
-        }
-      ]
+      "block": "waste:waste"
     },
     {
       "char": "%",
       "blocks": [
         {
           "random": 40,
-          "block": "minecraft:cobweb"
+          "block": "waste:waste"
         },
         {
           "random": 1000,
@@ -180,7 +166,48 @@
     },
     {
       "char": "*",
-      "block": "minecraft:potted_cactus"
+      "blocks": [
+        {
+          "random": 30,
+          "block": "waste:amethyst_ring_block"
+        },
+        {
+          "random": 30,
+          "block": "waste:film_block"
+        },
+        {
+          "random": 15,
+          "block": "waste:watch_block"
+        },
+        {
+          "random": 15,
+          "block": "waste:toy_block"
+        },
+        {
+          "random": 15,
+          "block": "waste:light_bulb_block"
+        },
+        {
+          "random": 15,
+          "block": "waste:necklace_block"
+        },
+        {
+          "random": 15,
+          "block": "waste:syringe_block"
+        },
+        {
+          "random": 15,
+          "block": "waste:fork_block"
+        },
+        {
+          "random": 15,
+          "block": "waste:battery_block"
+        },
+        {
+          "random": 15,
+          "block": "waste:paint_can_block"
+        }
+      ]
     },
     {
       "char": "l",
@@ -196,24 +223,24 @@
     },
     {
       "char": "L",
-      "block": "minecraft:bookshelf"
+      "block": "waste:waste"
     },
     {
       "char": "W",
-      "block": "minecraft:water"
+      "block": "waste:dirty_water"
     },
     {
       "char": "C",
       "block": "minecraft:chest[facing=north]",
-      "loot": "chestloot"
+      "loot": "filing_cabinet_loot"
     },
     {
       "char": "G",
-      "block": "minecraft:grass_block"
+      "block": "waste:dense_waste"
     },
     {
       "char": "D",
-      "block": "minecraft:dirt"
+      "block": "waste:dense_waste"
     },
     {
       "char": " ",

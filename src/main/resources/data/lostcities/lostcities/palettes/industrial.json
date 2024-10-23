@@ -1,0 +1,176 @@
+{
+  "palette": [
+    {
+      "char": "X",
+      "block": "architects_palette:plating_block",
+      "damaged": "minecraft:iron_bars"
+    },
+    {
+      "char": "b",
+      "block": "architects_palette:flint_pillar[facing=down]",
+      "damaged": "minecraft:iron_bars"
+    },
+    {
+      "char": "c",
+      "block": "architects_palette:flint_pillar[facing=south]",
+      "damaged": "minecraft:iron_bars"
+    },
+    {
+      "char": "d",
+      "block": "architects_palette:flint_pillar[facing=west]",
+      "damaged": "minecraft:iron_bars"
+    },
+    {
+      "char": "e",
+      "block": "minecraft:spawner",
+      "mob": "medium_mobs"
+    },
+    {
+      "char": "$",
+      "block": "architects_palette:hazard_block",
+      "damaged": "minecraft:iron_bars"
+    },
+    {
+      "char": "#",
+      "block": "architects_palette:plating_block",
+      "damaged": "minecraft:iron_bars"
+    },
+    {
+      "char": "}",
+      "block": "architects_palette:plating_block",
+      "damaged": "minecraft:iron_bars"
+    },
+    {
+        "char": "q",
+        "block": "architects_palette:hazard_block"
+      },
+      {
+        "char": "o",
+        "block": "architects_palette:flint_pillar[facing=south]"
+      },
+      {
+        "char": "j",
+        "block": "waste:broken_glass"
+      },
+      {
+        "char": "k",
+        "block": "architects_palette:flint_pillar[facing=up]"
+      },
+      {
+        "char": "r",
+        "block": "architects_palette:flint_pillar[facing=north]"
+      },
+      {
+        "char": "n",
+        "block": "architects_palette:flint_pillar[facing=west]"
+      },
+      {
+        "char": "i",
+        "block": "architects_palette:flint_pillar[facing=down]"
+      },
+      {
+        "char": "s",
+        "block": "architects_palette:flint_pillar[facing=east]"
+      },
+      {
+        "char": "m",
+        "block": "waste:amethyst_ring_block"
+      },
+      {
+        "char": "j",
+        "block": "minecraft:wall_torch[facing=east]"
+      },
+      {
+        "char": "k",
+        "block": "minecraft:wall_torch[facing=west]"
+      },
+      {
+        "char": "i",
+        "block": "minecraft:wall_torch[facing=south]"
+      },
+      {
+        "char": "m",
+        "block": "minecraft:wall_torch[facing=east]"
+      },
+      {
+        "char": "o",
+        "block": "architects_palette:pipe[axis=y,part=top,waterlogged=false]"
+      },
+      {
+        "char": "n",
+        "block": "minecraft:wall_torch[facing=west]"
+      },
+      {
+        "char": "j",
+        "block": "architects_palette:pipe[axis=y,part=bottom,waterlogged=false]"
+      },
+      {
+        "char": "q",
+        "block": "architects_palette:hazard_sign[facing=west,waterlogged=false]"
+      },
+      {
+        "char": "i",
+        "block": "architects_palette:flint_pillar[facing=east]"
+      },
+      {
+        "char": "k",
+        "block": "architects_palette:pipe[axis=y,part=middle,waterlogged=false]"
+      },
+      {
+        "char": "n",
+        "block": "minecraft:wall_torch[facing=east]"
+      },
+      {
+        "char": "r",
+        "block": "architects_palette:hazard_sign[facing=north,waterlogged=false]"
+      },
+      {
+        "char": "o",
+        "block": "minecraft:wall_torch[facing=west]"
+      },
+      {
+        "char": "k",
+        "block": "minecraft:wall_torch[facing=south]"
+      },
+      {
+        "char": "i",
+        "block": "architects_palette:flint_pillar[facing=north]"
+      },
+      {
+        "char": "q",
+        "block": "architects_palette:hazard_sign[facing=west,waterlogged=false]"
+      },
+      {
+        "char": "j",
+        "block": "architects_palette:flint_pillar[facing=east]"
+      },
+      {
+        "char": "m",
+        "block": "waste:amethyst_ring_block"
+      },
+      {
+        "char": "o",
+        "block": "minecraft:wall_torch[facing=north]"
+      },
+      {
+        "char": "m",
+        "block": "minecraft:wall_torch[facing=east]"
+      },
+      {
+        "char": "n",
+        "block": "minecraft:wall_torch[facing=west]"
+      },
+      {
+        "char": "j",
+        "block": "minecraft:wall_torch[facing=south]"
+      },
+      {
+        "char": "i",
+        "block": "waste:waste"
+      },
+      {
+        "char": "k",
+        "block": "waste:amethyst_ring_block"
+      }
+  ]
+}

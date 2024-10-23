@@ -2,15 +2,15 @@
   "palette": [
     {
       "char": "+",
-      "block": "minecraft:magma_block"
+      "block": "waste:broken_glass"
     },
     {
       "char": "`",
-      "block": "minecraft:end_stone"
+      "block": "waste:broken_glass"
     },
     {
       "char": "a",
-      "block": "minecraft:air"
+      "block": "waste:broken_glass"
     }
   ]
 }
