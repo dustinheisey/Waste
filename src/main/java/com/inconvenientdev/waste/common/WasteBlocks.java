@@ -10,6 +10,7 @@ import net.minecraft.tags.BlockTags;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.GlassBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.material.MaterialColor;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
@@ -41,6 +42,12 @@ public class WasteBlocks {
   public static final BlockEntry<TrashBlock> WATCH_BLOCK = registerTrash("watch_block", () -> WasteItems.WATCH.get());
   public static final BlockEntry<TrashBlock> TOY_BLOCK = registerTrash("toy_block", () -> WasteItems.TOY.get());
 
+  public static final BlockEntry<GlassBlock> BROKEN_GLASS = REGISTRATE.get()
+    .block("broken_glass", GlassBlock::new)
+    .simpleItem()
+    .properties(p -> p.strength(0f).sound(SoundType.GLASS))
+        .register();
+    
   public static final BlockEntry<RustyCabinetBlock> RUSTY_CABINET = REGISTRATE.get().block("rusty_cabinet", RustyCabinetBlock::new)
       .initialProperties(() -> Blocks.CHEST)
       .blockstate((ctx, prov) -> prov.getVariantBuilder(ctx.get()).forAllStates(state -> {

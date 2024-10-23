@@ -58,6 +58,8 @@ public class Waste {
 
   private void clientSetup(final FMLClientSetupEvent event) {
     // Client-side setup code (e.g., render layers)
+    ItemBlockRenderTypes.setRenderLayer(WasteBlocks.BROKEN_GLASS.get(), RenderType.translucent());
+    
     ItemBlockRenderTypes.setRenderLayer(WasteBlocks.AMETHYST_RING_BLOCK.get(), RenderType.translucent());
     ItemBlockRenderTypes.setRenderLayer(WasteBlocks.BATTERY_BLOCK.get(), RenderType.translucent());
     ItemBlockRenderTypes.setRenderLayer(WasteBlocks.BULLET_BLOCK.get(), RenderType.translucent());

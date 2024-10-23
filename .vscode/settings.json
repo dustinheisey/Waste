@@ -1,0 +1,19 @@
+{
+    "java.compile.nullAnalysis.mode": "automatic",
+    "java.codeGeneration.generateComments": true,
+    "files.exclude": {
+        "**/.husky": false,
+        "**/node_modules": false,
+        "commitlint.config.js": false,
+        "docs/.dendron.port": false,
+        "docs/.dendron.ws": false,
+        "docs/.gitignore": false,
+        "docs/dendron.code-workspace": false,
+        "docs/dendron.yml": false,
+        "docs/notes/.dendron.cache.json": false,
+        "docs/notes/.vscode": false,
+        "docs/notes/assets": false,
+        "docs/notes/root.schema.yml": false,
+        "package-lock.json": false
+    }
+}
