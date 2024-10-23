@@ -1,7 +1,7 @@
 {
   "palette": [
     {
-      "char": "X",
+      "char": "a",
       "block": "minecraft:stone_bricks",
       "damaged": "minecraft:iron_bars"
     },
@@ -28,16 +28,6 @@
     {
       "char": "$",
       "block": "minecraft:smooth_stone_slab[type=double]",
-      "damaged": "minecraft:iron_bars"
-    },
-    {
-      "char": "#",
-      "variant": "stonebrick",
-      "damaged": "minecraft:iron_bars"
-    },
-    {
-      "char": "}",
-      "variant": "stonebrick_rubble",
       "damaged": "minecraft:iron_bars"
     }
   ]

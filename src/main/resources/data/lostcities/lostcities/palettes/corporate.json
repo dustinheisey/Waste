@@ -1,7 +1,7 @@
 {
   "palette": [
     {
-      "char": "X",
+      "char": "a",
       "block": "architects_palette:onyx_bricks",
       "damaged": "minecraft:iron_bars"
     },
@@ -28,16 +28,6 @@
     {
       "char": "$",
       "block": "architects_palette:calcite_pillar[axis=x]",
-      "damaged": "minecraft:iron_bars"
-    },
-    {
-      "char": "#",
-      "block": "architects_palette:onyx_bricks",
-      "damaged": "minecraft:iron_bars"
-    },
-    {
-      "char": "}",
-      "block": "architects_palette:onyx_bricks",
       "damaged": "minecraft:iron_bars"
     }
   ]

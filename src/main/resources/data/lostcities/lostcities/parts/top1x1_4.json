@@ -3,7 +3,7 @@
   "zsize": 16,
   "slices": [
     [
-      "#ijjjjjjjjjjjji#",
+      "aijjjjjjjjjjjjia",
       "i              i",
       "j              j",
       "j   Q Q        j",
@@ -18,10 +18,10 @@
       "jQQQQ   QQ     j",
       "jQQQ    Q   Q Qj",
       "iQQQ        QQQi",
-      "#ijjjjjjjjjjjji#"
+      "aijjjjjjjjjjjjia"
     ],
     [
-      "#kjjjjjjjjjjjji#",
+      "akjjjjjjjjjjjjia",
       "i              k",
       "j              j",
       "j     Q        j",
@@ -36,10 +36,10 @@
       "jQ             j",
       "j              j",
       "i Q         QmQi",
-      "#kjjjjjjjjjjjjk#"
+      "akjjjjjjjjjjjjka"
     ],
     [
-      "#kjjjjjjjjjjjjk#",
+      "akjjjjjjjjjjjjka",
       "k              k",
       "j              j",
       "j              j",
@@ -54,25 +54,25 @@
       "j              j",
       "j              j",
       "k              k",
-      "#kjjjjjjjjjjjjk#"
+      "akjjjjjjjjjjjjka"
     ],
     [
-      "################",
-      "#innnnnnnnnnnni#",
-      "#oqqqqqqqqqqqqr#",
-      "#oqissssssssiqr#",
-      "#oqrjjjjjjjjrqr#",
-      "#oqrjjjjjjjjoqr#",
-      "#oqrjjjjjjjjoqr#",
-      "#oqrjjjjjjjjoqr#",
-      "#oqrjjjjjjjjoqr#",
-      "#oqrjjjjjjjjoqr#",
-      "#oqrjjjjjjjjoqr#",
-      "#oqrjjjjjjjjoqr#",
-      "#oqinnnnnnnniqr#",
-      "#oqqqqqqqqqqqqr#",
-      "#issssssssssssi#",
-      "################"
+      "aaaaaaaaaaaaaaaa",
+      "ainnnnnnnnnnnnia",
+      "aoqqqqqqqqqqqqra",
+      "aoqissssssssiqra",
+      "aoqrjjjjjjjjrqra",
+      "aoqrjjjjjjjjoqra",
+      "aoqrjjjjjjjjoqra",
+      "aoqrjjjjjjjjoqra",
+      "aoqrjjjjjjjjoqra",
+      "aoqrjjjjjjjjoqra",
+      "aoqrjjjjjjjjoqra",
+      "aoqrjjjjjjjjoqra",
+      "aoqinnnnnnnniqra",
+      "aoqqqqqqqqqqqqra",
+      "aissssssssssssia",
+      "aaaaaaaaaaaaaaaa"
     ],
     [
       "                ",

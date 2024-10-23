@@ -1,7 +1,12 @@
 {
   "palette": [
     {
-      "char": "X",
+      "char": "@",
+      "block": "minecraft:diamond_block",
+      "damaged": "minecraft:iron_bars"
+    },
+    {
+      "char": "a",
       "block": "architects_palette:plating_block",
       "damaged": "minecraft:iron_bars"
     },
@@ -28,16 +33,6 @@
     {
       "char": "$",
       "block": "architects_palette:hazard_block",
-      "damaged": "minecraft:iron_bars"
-    },
-    {
-      "char": "#",
-      "block": "architects_palette:plating_block",
-      "damaged": "minecraft:iron_bars"
-    },
-    {
-      "char": "}",
-      "block": "architects_palette:plating_block",
       "damaged": "minecraft:iron_bars"
     },
     {
