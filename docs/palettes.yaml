@@ -3,21 +3,25 @@ palletes:
   b: first trim y X
   c: first trim x X
   d: first trim z X
-  e: second trim y
-  f: second trim x
-  g: second trim z
-  h: glass
-  i: accent
-  j: garbage
-  k: garbage item
-  l: spawner easy
-  m: spawner medium
-  n: spawner hard
-  o: spawner blob
-  p: torch 1
-  q: torch 2
-  r: torch 3
-  s: torch 4
-  t: sign
-  u: chest
+  e: second trim y X
+  f: second trim x X
+  g: second trim z X
+  h: glass X
+  i: accent X
+  j: garbage X
+  k: garbage item X
+  l: spawner easy X
+  m: spawner medium X
+  n: spawner hard X
+  o: spawner blob X
+  p: torch 1 X
+  q: torch 2 X
+  r: torch 3 X
+  s: torch 4 X
+  t: sign 1
+  u: sign 2
+  v: sign 3
+  w: sign 4
+  x: chest
+  y: ladder
 
