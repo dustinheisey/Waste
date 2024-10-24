@@ -1,15 +1,7 @@
 {
   "palette": [
     {
-      "char": "+",
-      "block": "waste:broken_glass"
-    },
-    {
-      "char": "`",
-      "block": "waste:broken_glass"
-    },
-    {
-      "char": "4",
+      "char": "h",
       "block": "waste:broken_glass"
     }
   ]

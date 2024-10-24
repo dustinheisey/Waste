@@ -1,11 +1,6 @@
 {
   "palette": [
     {
-      "char": "@",
-      "block": "minecraft:diamond_block",
-      "damaged": "minecraft:iron_bars"
-    },
-    {
       "char": "a",
       "block": "architects_palette:plating_block",
       "damaged": "minecraft:iron_bars"
@@ -16,14 +11,26 @@
       "damaged": "minecraft:iron_bars"
     },
     {
+      "char": "J",
+      "block": "architects_palette:flint_pillar[facing=up]"
+    },
+    {
       "char": "c",
       "block": "architects_palette:flint_pillar[facing=south]",
       "damaged": "minecraft:iron_bars"
     },
     {
+      "char": "I",
+      "block": "architects_palette:flint_pillar[facing=north]"
+    },
+    {
       "char": "d",
       "block": "architects_palette:flint_pillar[facing=west]",
       "damaged": "minecraft:iron_bars"
+    },
+    {
+      "char": "K",
+      "block": "architects_palette:flint_pillar[facing=east]"
     },
     {
       "char": "e",
@@ -38,98 +45,9 @@
       "block": "architects_palette:pipe[axis=y,part=top,waterlogged=false]"
     },
     {
-      "char": "h",
-      "block": "waste:broken_glass"
-    },
-    {
       "char": "i",
       "block": "architects_palette:hazard_block",
       "damaged": "minecraft:iron_bars"
-    },
-    {
-      "char": "j",
-      "block": "waste:waste"
-    },
-    {
-      "char": "k",
-      "blocks": [
-        {
-          "random": 30,
-          "block": "waste:amethyst_ring_block"
-        },
-        {
-          "random": 30,
-          "block": "waste:film_block"
-        },
-        {
-          "random": 15,
-          "block": "waste:watch_block"
-        },
-        {
-          "random": 15,
-          "block": "waste:toy_block"
-        },
-        {
-          "random": 15,
-          "block": "waste:light_bulb_block"
-        },
-        {
-          "random": 15,
-          "block": "waste:necklace_block"
-        },
-        {
-          "random": 15,
-          "block": "waste:syringe_block"
-        },
-        {
-          "random": 15,
-          "block": "waste:fork_block"
-        },
-        {
-          "random": 15,
-          "block": "waste:battery_block"
-        },
-        {
-          "random": 15,
-          "block": "waste:paint_can_block"
-        }
-      ]
-    },
-        {
-      "char": "l",
-      "block": "minecraft:spawner",
-      "mob": "easy_mobs"
-    },
-    {
-      "char": "m",
-      "block": "minecraft:spawner",
-      "mob": "medium_mobs"
-    },
-    {
-      "char": "n",
-      "block": "minecraft:spawner",
-      "mob": "medium_mobs"
-    },
-    {
-      "char": "o",
-      "block": "minecraft:spawner",
-      "mob": "medium_mobs"
-    },
-    {
-      "char": "p",
-      "block": "minecraft:wall_torch[facing=north]"
-    },
-    {
-      "char": "q",
-      "block": "minecraft:wall_torch[facing=east]"
-    },
-        {
-      "char": "r",
-      "block": "minecraft:wall_torch[facing=south]"
-    },
-    {
-      "char": "s",
-      "block": "minecraft:wall_torch[facing=west]"
     },
     {
       "char": "t",
@@ -146,14 +64,6 @@
     {
       "char": "w",
       "block": "architects_palette:hazard_sign[facing=west,waterlogged=false]"
-    },
-    {
-      "char": "x",
-      "block": "waste:rusty_cabinet"
-    },
-    {
-      "char": "y",
-      "block": "minecraft:ladder[facing=north,waterlogged=false]"
     }
   ]
 }

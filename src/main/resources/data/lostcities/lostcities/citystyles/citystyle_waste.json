@@ -7,12 +7,12 @@
     "buildingchance": 0.5
   },
   "streetblocks": {
-    "border": "y",
-    "wall": "w",
-    "street": "S",
-    "streetbase": "f",
-    "streetvariant": "F",
-    "width": 3
+    "border": "z",
+    "wall": "A",
+    "street": "B",
+    "streetbase": "a",
+    "streetvariant": "a",
+    "width": 0
   },
   "parkblocks": {
     "elevation": "x"
@@ -22,7 +22,7 @@
     "glass": "+"
   },
   "railblocks": {
-    "railmain": "y"
+    "railmain": "z"
   },
   "sphereblocks": {
     "glass": "Z",

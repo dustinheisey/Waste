@@ -1,49 +1,107 @@
 {
   "palette": [
     {
-      "char": "h",
-      "block": "minecraft:glowstone"
+      "char": "@",
+      "block": "minecraft:diamond_block",
+      "damaged": "minecraft:iron_bars"
     },
     {
-      "char": "g",
-      "block": "minecraft:redstone_torch[lit=true]"
+      "char": "j",
+      "block": "waste:waste"
+    },
+    {
+      "char": "k",
+      "blocks": [
+        {
+          "random": 30,
+          "block": "waste:amethyst_ring_block"
+        },
+        {
+          "random": 30,
+          "block": "waste:film_block"
+        },
+        {
+          "random": 15,
+          "block": "waste:watch_block"
+        },
+        {
+          "random": 15,
+          "block": "waste:toy_block"
+        },
+        {
+          "random": 15,
+          "block": "waste:light_bulb_block"
+        },
+        {
+          "random": 15,
+          "block": "waste:necklace_block"
+        },
+        {
+          "random": 15,
+          "block": "waste:syringe_block"
+        },
+        {
+          "random": 15,
+          "block": "waste:fork_block"
+        },
+        {
+          "random": 15,
+          "block": "waste:battery_block"
+        },
+        {
+          "random": 15,
+          "block": "waste:paint_can_block"
+        }
+      ]
     },
     {
       "char": "l",
-      "block": "minecraft:ladder[facing=north]"
+      "block": "minecraft:spawner",
+      "mob": "easy_mobs"
     },
     {
-      "char": "-",
-      "block": "minecraft:oak_pressure_plate"
+      "char": "m",
+      "block": "minecraft:spawner",
+      "mob": "medium_mobs"
     },
     {
-      "char": ".",
-      "block": "minecraft:oak_fence"
+      "char": "n",
+      "block": "minecraft:spawner",
+      "mob": "hard_mobs"
     },
     {
-      "char": "W",
-      "block": "waste:dirty_water"
+      "char": "o",
+      "block": "minecraft:spawner",
+      "mob": "blob_mobs"
     },
     {
-      "char": "C",
+      "char": "p",
+      "block": "minecraft:wall_torch[facing=north]"
+    },
+    {
+      "char": "q",
+      "block": "minecraft:wall_torch[facing=east]"
+    },
+        {
+      "char": "r",
+      "block": "minecraft:wall_torch[facing=south]"
+    },
+    {
+      "char": "s",
+      "block": "minecraft:wall_torch[facing=west]"
+    },
+    {
+      "char": "x",
       "block": "minecraft:chest[facing=north]",
       "loot": "filing_cabinet_loot"
     },
     {
-      "char": "G",
+      "char": "y",
+      "block": "minecraft:ladder[facing=north]"
+    },
+    {
+      "char": "z",
       "block": "waste:dense_waste"
-    },
-    {
-      "char": "D",
-      "block": "waste:dense_waste"
-    },
-    {
-      "char": " ",
-      "block": "minecraft:air"
-    },
-    {
-      "char": "~",
-      "block": "minecraft:structure_void"
     }
   ]
 }
