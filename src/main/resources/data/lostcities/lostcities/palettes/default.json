@@ -34,6 +34,26 @@
       "block": "minecraft:iron_bars"
     },
     {
+      "char": "M",
+      "block": "minecraft:iron_bars[east=false,north=false,south=true,waterlogged=false,west=true]"
+    },
+    {
+      "char": "N",
+      "block": "minecraft:iron_bars[east=true,north=false,south=true,waterlogged=false,west=false]"
+    },
+    {
+      "char": "O",
+      "block": "minecraft:iron_bars[east=false,north=true,south=true,waterlogged=false,west=true]"
+    },
+    {
+      "char": "P",
+      "block": "minecraft:iron_bars[east=true,north=false,south=false,waterlogged=false,west=true]"
+    },
+    {
+      "char": "Q",
+      "block": "architects_palette:plating_stairs[facing=south,half=bottom,shape=straight,waterlogged=false]"
+    },
+    {
       "char": " ",
       "block": "minecraft:air"
     },
