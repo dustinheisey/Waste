@@ -3,22 +3,22 @@
   "zsize": 16,
   "slices": [
     [
-      "################",
-      "################",
-      "################",
-      "################",
-      "################",
-      "################",
-      "################",
-      "################",
-      "################",
-      "################",
-      "#############  #",
-      "#############  #",
-      "#############  #",
-      "#############  #",
-      "#############))#",
-      "################"
+      "aaaaaaaaaaaaaaaa",
+      "aaaaaaaaaaaaaaaa",
+      "aaaaaaaaaaaaaaaa",
+      "aaaaaaaaaaaaaaaa",
+      "aaaaaaaaaaaaaaaa",
+      "aaaaaaaaaaaaaaaa",
+      "aaaaaaaaaaaaaaaa",
+      "aaaaaaaaaaaaaaaa",
+      "aaaaaaaaaaaaaaaa",
+      "aaaaaaaaaaaaaaaa",
+      "aaaaaaaaaaaaa  a",
+      "aaaaaaaaaaaaa  a",
+      "aaaaaaaaaaaaa  a",
+      "aaaaaaaaaaaaa  a",
+      "aaaaaaaaaaaaa))a",
+      "aaaaaaaaaaaaaaaa"
     ],
     [
       "wwwwwwwwwwwwwwww",
@@ -66,13 +66,13 @@
       "                ",
       "                ",
       "                ",
-      "            ####",
-      "            ####",
-      "            ####",
-      "            ####",
-      "            ####",
-      "            ####",
-      "            ####"
+      "            aaaa",
+      "            aaaa",
+      "            aaaa",
+      "            aaaa",
+      "            aaaa",
+      "            aaaa",
+      "            aaaa"
     ]
   ]
 }

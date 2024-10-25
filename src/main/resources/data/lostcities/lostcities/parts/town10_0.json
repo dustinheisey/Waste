@@ -3,26 +3,26 @@
   "zsize": 16,
   "slices": [
     [
-      "################",
-      "#SQSQSQSQSQSQS##",
-      "SQSQSQSQSQSQSQS#",
-      "QSQSQSQSQSQSQSQ#",
-      "SQSQSQSQSQSQSQS#",
-      "QSQSQSQSQSQSQSQ#",
-      "SQSQSQSQSQSQSQS#",
-      "QSQSQSQSQSQSQSQ#",
-      "SQSQSQSQSQSQSQS#",
-      "QSQSQSQSQSQSQSQ#",
-      "SQSQSQSQSQSQSQS#",
-      "QSQSQSQSQSQSQSQ#",
-      "SQSQSQSQSQSQSQS#",
-      "QSQSQSQSQSQSQSQ#",
-      "SQSQSQSQSQSQSQS#",
-      "QSQSQSQSQSQSQS##"
+      "aaaaaaaaaaaaaaaa",
+      "aSQSQSQSQSQSQSaa",
+      "SQSQSQSQSQSQSQSa",
+      "QSQSQSQSQSQSQSQa",
+      "SQSQSQSQSQSQSQSa",
+      "QSQSQSQSQSQSQSQa",
+      "SQSQSQSQSQSQSQSa",
+      "QSQSQSQSQSQSQSQa",
+      "SQSQSQSQSQSQSQSa",
+      "QSQSQSQSQSQSQSQa",
+      "SQSQSQSQSQSQSQSa",
+      "QSQSQSQSQSQSQSQa",
+      "SQSQSQSQSQSQSQSa",
+      "QSQSQSQSQSQSQSQa",
+      "SQSQSQSQSQSQSQSa",
+      "QSQSQSQSQSQSQSaa"
     ],
     [
-      "#aaaaaaaaaaaaa##",
-      "#             ##",
+      "aaaaaaaaaaaaaaaa",
+      "a             aa",
       "               a",
       "               a",
       "               a",
@@ -36,11 +36,11 @@
       "               a",
       "               a",
       "               a",
-      "              ##"
+      "              aa"
     ],
     [
-      "#aaaaaaaaaaaaa##",
-      "#             ##",
+      "aaaaaaaaaaaaaaaa",
+      "a             aa",
       "               a",
       "               a",
       "               a",
@@ -54,11 +54,11 @@
       "               a",
       "               a",
       "               a",
-      "              ##"
+      "              aa"
     ],
     [
-      "#aaaaaaaaaaaaa##",
-      "#             ##",
+      "aaaaaaaaaaaaaaaa",
+      "a             aa",
       "               a",
       "               a",
       "               a",
@@ -72,11 +72,11 @@
       "               a",
       "               a",
       "               a",
-      "              ##"
+      "              aa"
     ],
     [
-      "#aaaaaaaaaaaaa##",
-      "#             ##",
+      "aaaaaaaaaaaaaaaa",
+      "a             aa",
       "               a",
       "               a",
       "               a",
@@ -90,25 +90,25 @@
       "               a",
       "               a",
       "               a",
-      "              ##"
+      "              aa"
     ],
     [
-      "################",
-      "################",
-      "################",
-      "################",
-      "################",
-      "################",
-      "################",
-      "################",
-      "################",
-      "################",
-      "################",
-      "################",
-      "################",
-      "################",
-      "################",
-      "################"
+      "aaaaaaaaaaaaaaaa",
+      "aaaaaaaaaaaaaaaa",
+      "aaaaaaaaaaaaaaaa",
+      "aaaaaaaaaaaaaaaa",
+      "aaaaaaaaaaaaaaaa",
+      "aaaaaaaaaaaaaaaa",
+      "aaaaaaaaaaaaaaaa",
+      "aaaaaaaaaaaaaaaa",
+      "aaaaaaaaaaaaaaaa",
+      "aaaaaaaaaaaaaaaa",
+      "aaaaaaaaaaaaaaaa",
+      "aaaaaaaaaaaaaaaa",
+      "aaaaaaaaaaaaaaaa",
+      "aaaaaaaaaaaaaaaa",
+      "aaaaaaaaaaaaaaaa",
+      "aaaaaaaaaaaaaaaa"
     ]
   ]
 }

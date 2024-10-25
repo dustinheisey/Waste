@@ -64,6 +64,14 @@
     {
       "char": "w",
       "block": "architects_palette:hazard_sign[facing=west,waterlogged=false]"
+    },
+    {
+      "char": "A",
+      "block": "architects_palette:plating_wall"
+    },
+    {
+      "char": "G",
+      "block": "architects_palette:plating_slab[type=bottom]"
     }
   ]
 }

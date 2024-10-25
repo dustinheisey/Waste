@@ -12,14 +12,14 @@
     "street": "B",
     "streetbase": "a",
     "streetvariant": "a",
-    "width": 0
+    "width": 3
   },
   "parkblocks": {
     "elevation": "x"
   },
   "corridorblocks": {
     "roof": "x",
-    "glass": "+"
+    "glass": "h"
   },
   "railblocks": {
     "railmain": "z"
@@ -62,48 +62,6 @@
       {
         "factor": 0.4,
         "value": "building8"
-      }
-    ],
-    "multibuildings": [
-      {
-        "factor": 0.3,
-        "value": "multi1"
-      },
-      {
-        "factor": 0.3,
-        "value": "multi2"
-      },
-      {
-        "factor": 0.2,
-        "value": "multi3"
-      },
-      {
-        "factor": 0.2,
-        "value": "multi4"
-      },
-      {
-        "factor": 0.1,
-        "value": "multi5"
-      },
-      {
-        "factor": 0.1,
-        "value": "library"
-      },
-      {
-        "factor": 0.1,
-        "value": "center"
-      },
-      {
-        "factor": 0.08,
-        "value": "townhall"
-      },
-      {
-        "factor": 0.25,
-        "value": "shopping"
-      },
-      {
-        "factor": 0.2,
-        "value": "shopping_open"
       }
     ],
     "bridges": [

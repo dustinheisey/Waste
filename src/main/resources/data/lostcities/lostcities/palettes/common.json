@@ -72,7 +72,7 @@
     {
       "char": "o",
       "block": "minecraft:spawner",
-      "mob": "blob_mobs"
+      "mob": "flesh_blob"
     },
     {
       "char": "p",

@@ -23,58 +23,58 @@ public class WasteRegion extends Region
   public void addBiomes(Registry<Biome> registry, Consumer<Pair<Climate.ParameterPoint, ResourceKey<Biome>>> mapper)
   {
     this.addModifiedVanillaOverworldBiomes(mapper, builder -> {
-      builder.replaceBiome(Biomes.PLAINS , WasteBiomes.GARBAGE_DUMP);
-      builder.replaceBiome(Biomes.SUNFLOWER_PLAINS , WasteBiomes.GARBAGE_DUMP);
-      builder.replaceBiome(Biomes.SNOWY_PLAINS , WasteBiomes.GARBAGE_DUMP);
-      builder.replaceBiome(Biomes.ICE_SPIKES , WasteBiomes.GARBAGE_DUMP);
-      builder.replaceBiome(Biomes.SWAMP , WasteBiomes.GARBAGE_DUMP);
-      builder.replaceBiome(Biomes.FOREST , WasteBiomes.GARBAGE_DUMP);
-      builder.replaceBiome(Biomes.FLOWER_FOREST , WasteBiomes.GARBAGE_DUMP);
-      builder.replaceBiome(Biomes.BIRCH_FOREST , WasteBiomes.GARBAGE_DUMP);
-      builder.replaceBiome(Biomes.DARK_FOREST , WasteBiomes.GARBAGE_DUMP);
-      builder.replaceBiome(Biomes.OLD_GROWTH_BIRCH_FOREST , WasteBiomes.GARBAGE_DUMP);
-      builder.replaceBiome(Biomes.OLD_GROWTH_PINE_TAIGA , WasteBiomes.GARBAGE_DUMP);
-      builder.replaceBiome(Biomes.OLD_GROWTH_SPRUCE_TAIGA , WasteBiomes.GARBAGE_DUMP);
-      builder.replaceBiome(Biomes.TAIGA , WasteBiomes.GARBAGE_DUMP);
-      builder.replaceBiome(Biomes.SNOWY_TAIGA , WasteBiomes.GARBAGE_DUMP);
-      builder.replaceBiome(Biomes.SAVANNA_PLATEAU , WasteBiomes.GARBAGE_DUMP);
-      builder.replaceBiome(Biomes.WINDSWEPT_FOREST , WasteBiomes.GARBAGE_DUMP);
-      builder.replaceBiome(Biomes.WINDSWEPT_SAVANNA , WasteBiomes.GARBAGE_DUMP);
-      builder.replaceBiome(Biomes.JUNGLE , WasteBiomes.GARBAGE_DUMP);
-      builder.replaceBiome(Biomes.SPARSE_JUNGLE , WasteBiomes.GARBAGE_DUMP);
-      builder.replaceBiome(Biomes.BAMBOO_JUNGLE , WasteBiomes.GARBAGE_DUMP);
-      builder.replaceBiome(Biomes.MEADOW , WasteBiomes.GARBAGE_DUMP);
-      builder.replaceBiome(Biomes.GROVE , WasteBiomes.GARBAGE_DUMP);
-      builder.replaceBiome(Biomes.MUSHROOM_FIELDS , WasteBiomes.GARBAGE_DUMP);
-      builder.replaceBiome(Biomes.DRIPSTONE_CAVES , WasteBiomes.GARBAGE_DUMP);
-      builder.replaceBiome(Biomes.LUSH_CAVES , WasteBiomes.GARBAGE_DUMP);
+      builder.replaceBiome(Biomes.PLAINS, WasteBiomes.ABANDONED_CITY);
+      builder.replaceBiome(Biomes.SUNFLOWER_PLAINS, WasteBiomes.ABANDONED_CITY);
+      builder.replaceBiome(Biomes.SNOWY_PLAINS, WasteBiomes.ABANDONED_CITY);
+      builder.replaceBiome(Biomes.ICE_SPIKES, WasteBiomes.ABANDONED_CITY);
+      builder.replaceBiome(Biomes.SWAMP, WasteBiomes.ABANDONED_CITY);
+      builder.replaceBiome(Biomes.FOREST, WasteBiomes.ABANDONED_CITY);
+      builder.replaceBiome(Biomes.FLOWER_FOREST, WasteBiomes.ABANDONED_CITY);
+      builder.replaceBiome(Biomes.BIRCH_FOREST, WasteBiomes.ABANDONED_CITY);
+      builder.replaceBiome(Biomes.DARK_FOREST, WasteBiomes.ABANDONED_CITY);
+      builder.replaceBiome(Biomes.OLD_GROWTH_BIRCH_FOREST, WasteBiomes.ABANDONED_CITY);
+      builder.replaceBiome(Biomes.OLD_GROWTH_PINE_TAIGA, WasteBiomes.ABANDONED_CITY);
+      builder.replaceBiome(Biomes.OLD_GROWTH_SPRUCE_TAIGA, WasteBiomes.ABANDONED_CITY);
+      builder.replaceBiome(Biomes.TAIGA, WasteBiomes.ABANDONED_CITY);
+      builder.replaceBiome(Biomes.SNOWY_TAIGA, WasteBiomes.ABANDONED_CITY);
+      builder.replaceBiome(Biomes.SAVANNA_PLATEAU, WasteBiomes.ABANDONED_CITY);
+      builder.replaceBiome(Biomes.WINDSWEPT_FOREST, WasteBiomes.ABANDONED_CITY);
+      builder.replaceBiome(Biomes.WINDSWEPT_SAVANNA, WasteBiomes.ABANDONED_CITY);
+      builder.replaceBiome(Biomes.JUNGLE, WasteBiomes.ABANDONED_CITY);
+      builder.replaceBiome(Biomes.SPARSE_JUNGLE, WasteBiomes.ABANDONED_CITY);
+      builder.replaceBiome(Biomes.BAMBOO_JUNGLE, WasteBiomes.ABANDONED_CITY);
+      builder.replaceBiome(Biomes.MEADOW, WasteBiomes.ABANDONED_CITY);
+      builder.replaceBiome(Biomes.GROVE, WasteBiomes.ABANDONED_CITY);
+      builder.replaceBiome(Biomes.MUSHROOM_FIELDS, WasteBiomes.ABANDONED_CITY);
+      builder.replaceBiome(Biomes.DRIPSTONE_CAVES, WasteBiomes.ABANDONED_CITY);
+      builder.replaceBiome(Biomes.LUSH_CAVES, WasteBiomes.ABANDONED_CITY);
 
-      builder.replaceBiome(Biomes.SNOWY_SLOPES , WasteBiomes.TRASH_MOUNTAIN);
-      builder.replaceBiome(Biomes.FROZEN_PEAKS , WasteBiomes.TRASH_MOUNTAIN);
-      builder.replaceBiome(Biomes.JAGGED_PEAKS , WasteBiomes.TRASH_MOUNTAIN);
-      builder.replaceBiome(Biomes.STONY_PEAKS , WasteBiomes.TRASH_MOUNTAIN);
-      builder.replaceBiome(Biomes.WINDSWEPT_HILLS , WasteBiomes.TRASH_MOUNTAIN);
-      builder.replaceBiome(Biomes.WINDSWEPT_GRAVELLY_HILLS , WasteBiomes.TRASH_MOUNTAIN);
+      builder.replaceBiome(Biomes.SNOWY_SLOPES, WasteBiomes.ABANDONED_CITY);
+      builder.replaceBiome(Biomes.FROZEN_PEAKS, WasteBiomes.ABANDONED_CITY);
+      builder.replaceBiome(Biomes.JAGGED_PEAKS, WasteBiomes.ABANDONED_CITY);
+      builder.replaceBiome(Biomes.STONY_PEAKS, WasteBiomes.ABANDONED_CITY);
+      builder.replaceBiome(Biomes.WINDSWEPT_HILLS, WasteBiomes.ABANDONED_CITY);
+      builder.replaceBiome(Biomes.WINDSWEPT_GRAVELLY_HILLS, WasteBiomes.ABANDONED_CITY);
 
-      builder.replaceBiome(Biomes.BADLANDS , WasteBiomes.INDUSTRIAL_WASTE);
-      builder.replaceBiome(Biomes.ERODED_BADLANDS , WasteBiomes.INDUSTRIAL_WASTE);
-      builder.replaceBiome(Biomes.WOODED_BADLANDS , WasteBiomes.INDUSTRIAL_WASTE);
+      builder.replaceBiome(Biomes.BADLANDS, WasteBiomes.ABANDONED_CITY);
+      builder.replaceBiome(Biomes.ERODED_BADLANDS, WasteBiomes.ABANDONED_CITY);
+      builder.replaceBiome(Biomes.WOODED_BADLANDS, WasteBiomes.ABANDONED_CITY);
 
-      builder.replaceBiome(Biomes.DESERT , WasteBiomes.ABANDONED_CITY);
-      builder.replaceBiome(Biomes.SAVANNA , WasteBiomes.ABANDONED_CITY);
+      builder.replaceBiome(Biomes.DESERT, WasteBiomes.ABANDONED_CITY);
+      builder.replaceBiome(Biomes.SAVANNA, WasteBiomes.ABANDONED_CITY);
 
-      builder.replaceBiome(Biomes.BEACH , WasteBiomes.GARBAGE_PATCH);
-      builder.replaceBiome(Biomes.SNOWY_BEACH , WasteBiomes.GARBAGE_PATCH);
-      builder.replaceBiome(Biomes.STONY_SHORE , WasteBiomes.GARBAGE_PATCH);
-      builder.replaceBiome(Biomes.WARM_OCEAN , WasteBiomes.GARBAGE_PATCH);
-      builder.replaceBiome(Biomes.LUKEWARM_OCEAN , WasteBiomes.GARBAGE_PATCH);
-      builder.replaceBiome(Biomes.DEEP_LUKEWARM_OCEAN , WasteBiomes.GARBAGE_PATCH);
-      builder.replaceBiome(Biomes.OCEAN , WasteBiomes.GARBAGE_PATCH);
-      builder.replaceBiome(Biomes.DEEP_OCEAN , WasteBiomes.GARBAGE_PATCH);
-      builder.replaceBiome(Biomes.COLD_OCEAN , WasteBiomes.GARBAGE_PATCH);
-      builder.replaceBiome(Biomes.DEEP_COLD_OCEAN , WasteBiomes.GARBAGE_PATCH);
-      builder.replaceBiome(Biomes.FROZEN_OCEAN , WasteBiomes.GARBAGE_PATCH);
-      builder.replaceBiome(Biomes.DEEP_FROZEN_OCEAN , WasteBiomes.GARBAGE_PATCH);
+      builder.replaceBiome(Biomes.BEACH, WasteBiomes.ABANDONED_CITY);
+      builder.replaceBiome(Biomes.SNOWY_BEACH, WasteBiomes.ABANDONED_CITY);
+      builder.replaceBiome(Biomes.STONY_SHORE, WasteBiomes.ABANDONED_CITY);
+      builder.replaceBiome(Biomes.WARM_OCEAN, WasteBiomes.ABANDONED_CITY);
+      builder.replaceBiome(Biomes.LUKEWARM_OCEAN, WasteBiomes.ABANDONED_CITY);
+      builder.replaceBiome(Biomes.DEEP_LUKEWARM_OCEAN, WasteBiomes.ABANDONED_CITY);
+      builder.replaceBiome(Biomes.OCEAN, WasteBiomes.ABANDONED_CITY);
+      builder.replaceBiome(Biomes.DEEP_OCEAN, WasteBiomes.ABANDONED_CITY);
+      builder.replaceBiome(Biomes.COLD_OCEAN, WasteBiomes.ABANDONED_CITY);
+      builder.replaceBiome(Biomes.DEEP_COLD_OCEAN, WasteBiomes.ABANDONED_CITY);
+      builder.replaceBiome(Biomes.FROZEN_OCEAN, WasteBiomes.ABANDONED_CITY);
+      builder.replaceBiome(Biomes.DEEP_FROZEN_OCEAN, WasteBiomes.ABANDONED_CITY);
     });
   }
 }
