@@ -49,32 +49,32 @@ public class WasteRegion extends Region
       builder.replaceBiome(Biomes.DRIPSTONE_CAVES, WasteBiomes.ABANDONED_CITY);
       builder.replaceBiome(Biomes.LUSH_CAVES, WasteBiomes.ABANDONED_CITY);
 
-      builder.replaceBiome(Biomes.SNOWY_SLOPES, WasteBiomes.ABANDONED_CITY);
-      builder.replaceBiome(Biomes.FROZEN_PEAKS, WasteBiomes.ABANDONED_CITY);
-      builder.replaceBiome(Biomes.JAGGED_PEAKS, WasteBiomes.ABANDONED_CITY);
-      builder.replaceBiome(Biomes.STONY_PEAKS, WasteBiomes.ABANDONED_CITY);
-      builder.replaceBiome(Biomes.WINDSWEPT_HILLS, WasteBiomes.ABANDONED_CITY);
-      builder.replaceBiome(Biomes.WINDSWEPT_GRAVELLY_HILLS, WasteBiomes.ABANDONED_CITY);
+      // builder.replaceBiome(Biomes.SNOWY_SLOPES, WasteBiomes.ABANDONED_CITY);
+      // builder.replaceBiome(Biomes.FROZEN_PEAKS, WasteBiomes.ABANDONED_CITY);
+      // builder.replaceBiome(Biomes.JAGGED_PEAKS, WasteBiomes.ABANDONED_CITY);
+      // builder.replaceBiome(Biomes.STONY_PEAKS, WasteBiomes.ABANDONED_CITY);
+      // builder.replaceBiome(Biomes.WINDSWEPT_HILLS, WasteBiomes.ABANDONED_CITY);
+      // builder.replaceBiome(Biomes.WINDSWEPT_GRAVELLY_HILLS, WasteBiomes.ABANDONED_CITY);
 
       builder.replaceBiome(Biomes.BADLANDS, WasteBiomes.ABANDONED_CITY);
       builder.replaceBiome(Biomes.ERODED_BADLANDS, WasteBiomes.ABANDONED_CITY);
       builder.replaceBiome(Biomes.WOODED_BADLANDS, WasteBiomes.ABANDONED_CITY);
 
-      builder.replaceBiome(Biomes.DESERT, WasteBiomes.ABANDONED_CITY);
-      builder.replaceBiome(Biomes.SAVANNA, WasteBiomes.ABANDONED_CITY);
+      // builder.replaceBiome(Biomes.DESERT, WasteBiomes.ABANDONED_CITY);
+      // builder.replaceBiome(Biomes.SAVANNA, WasteBiomes.ABANDONED_CITY);
 
-      builder.replaceBiome(Biomes.BEACH, WasteBiomes.ABANDONED_CITY);
-      builder.replaceBiome(Biomes.SNOWY_BEACH, WasteBiomes.ABANDONED_CITY);
-      builder.replaceBiome(Biomes.STONY_SHORE, WasteBiomes.ABANDONED_CITY);
-      builder.replaceBiome(Biomes.WARM_OCEAN, WasteBiomes.ABANDONED_CITY);
-      builder.replaceBiome(Biomes.LUKEWARM_OCEAN, WasteBiomes.ABANDONED_CITY);
-      builder.replaceBiome(Biomes.DEEP_LUKEWARM_OCEAN, WasteBiomes.ABANDONED_CITY);
-      builder.replaceBiome(Biomes.OCEAN, WasteBiomes.ABANDONED_CITY);
-      builder.replaceBiome(Biomes.DEEP_OCEAN, WasteBiomes.ABANDONED_CITY);
-      builder.replaceBiome(Biomes.COLD_OCEAN, WasteBiomes.ABANDONED_CITY);
-      builder.replaceBiome(Biomes.DEEP_COLD_OCEAN, WasteBiomes.ABANDONED_CITY);
-      builder.replaceBiome(Biomes.FROZEN_OCEAN, WasteBiomes.ABANDONED_CITY);
-      builder.replaceBiome(Biomes.DEEP_FROZEN_OCEAN, WasteBiomes.ABANDONED_CITY);
+      // builder.replaceBiome(Biomes.BEACH, WasteBiomes.ABANDONED_CITY);
+      // builder.replaceBiome(Biomes.SNOWY_BEACH, WasteBiomes.ABANDONED_CITY);
+      // builder.replaceBiome(Biomes.STONY_SHORE, WasteBiomes.ABANDONED_CITY);
+      // builder.replaceBiome(Biomes.WARM_OCEAN, WasteBiomes.ABANDONED_CITY);
+      // builder.replaceBiome(Biomes.LUKEWARM_OCEAN, WasteBiomes.ABANDONED_CITY);
+      // builder.replaceBiome(Biomes.DEEP_LUKEWARM_OCEAN, WasteBiomes.ABANDONED_CITY);
+      // builder.replaceBiome(Biomes.OCEAN, WasteBiomes.ABANDONED_CITY);
+      // builder.replaceBiome(Biomes.DEEP_OCEAN, WasteBiomes.ABANDONED_CITY);
+      // builder.replaceBiome(Biomes.COLD_OCEAN, WasteBiomes.ABANDONED_CITY);
+      // builder.replaceBiome(Biomes.DEEP_COLD_OCEAN, WasteBiomes.ABANDONED_CITY);
+      // builder.replaceBiome(Biomes.FROZEN_OCEAN, WasteBiomes.ABANDONED_CITY);
+      // builder.replaceBiome(Biomes.DEEP_FROZEN_OCEAN, WasteBiomes.ABANDONED_CITY);
     });
   }
 }

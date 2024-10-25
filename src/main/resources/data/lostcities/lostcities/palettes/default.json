@@ -2,7 +2,7 @@
   "palette": [
     {
       "char": "A",
-      "block": "architects_palette:plating_wall"
+      "block": "minecraft:cobblestone_wall"
     },
     {
       "char": "B",
@@ -68,6 +68,14 @@
     {
       "char": "S",
       "block": "minecraft:iron_block"
+    },
+    {
+      "char": "T",
+      "block": "minecraft:cyan_terracotta"
+    },
+    {
+      "char": "U",
+      "block": "minecraft:stone_bricks"
     },
     {
       "char": "L",

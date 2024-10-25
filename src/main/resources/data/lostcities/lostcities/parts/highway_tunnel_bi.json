@@ -2,32 +2,32 @@
   "meta": [
     {
       "key": "support",
-      "char": "v"
+      "char": "U"
     }
   ],
   "xsize": 16,
   "zsize": 16,
   "slices": [
     [
-      "vRRRRRRuuRRRRRRv",
-      "RRRRRRRuuRRRRRRR",
-      "RRRRRRRuuRRRRRRR",
-      "RRRRRRRuuRRRRRRR",
-      "RRRRRRRuuRRRRRRR",
-      "RRRRRRRuuRRRRRRR",
-      "RRRRRRRuuRRRRRRR",
-      "uuuuuuuuuuuuuuuu",
-      "uuuuuuuuuuuuuuuu",
-      "RRRRRRRuuRRRRRRR",
-      "RRRRRRRuuRRRRRRR",
-      "RRRRRRRuuRRRRRRR",
-      "RRRRRRRuuRRRRRRR",
-      "RRRRRRRuuRRRRRRR",
-      "RRRRRRRuuRRRRRRR",
-      "vRRRRRRuuRRRRRRv"
+      "UTTTTTTBBTTTTTTU",
+      "TTTTTTTBBTTTTTTT",
+      "TTTTTTTBBTTTTTTT",
+      "TTTTTTTBBTTTTTTT",
+      "TTTTTTTBBTTTTTTT",
+      "TTTTTTTBBTTTTTTT",
+      "TTTTTTTBBTTTTTTT",
+      "BBBBBBBBBBBBBBBB",
+      "BBBBBBBBBBBBBBBB",
+      "TTTTTTTBBTTTTTTT",
+      "TTTTTTTBBTTTTTTT",
+      "TTTTTTTBBTTTTTTT",
+      "TTTTTTTBBTTTTTTT",
+      "TTTTTTTBBTTTTTTT",
+      "TTTTTTTBBTTTTTTT",
+      "UTTTTTTBBTTTTTTU"
     ],
     [
-      "v~~~~~~~~~~~~~~v",
+      "U~~~~~~~~~~~~~~U",
       "~~~~~~~~~~~~~~~~",
       "~~~~~~~~~~~~~~~~",
       "~~~~~~~~~~~~~~~~",
@@ -42,10 +42,10 @@
       "~~~~~~~~~~~~~~~~",
       "~~~~~~~~~~~~~~~~",
       "~~~~~~~~~~~~~~~~",
-      "v~~~~~~~~~~~~~~v"
+      "U~~~~~~~~~~~~~~U"
     ],
     [
-      "v~~~~~~~~~~~~~~v",
+      "U~~~~~~~~~~~~~~U",
       "~~~~~~~~~~~~~~~~",
       "~~~~~~~~~~~~~~~~",
       "~~~~~~~~~~~~~~~~",
@@ -60,10 +60,10 @@
       "~~~~~~~~~~~~~~~~",
       "~~~~~~~~~~~~~~~~",
       "~~~~~~~~~~~~~~~~",
-      "v~~~~~~~~~~~~~~v"
+      "U~~~~~~~~~~~~~~U"
     ],
     [
-      "v~~~~~~~~~~~~~~v",
+      "U~~~~~~~~~~~~~~U",
       "~~~~~~~~~~~~~~~~",
       "~~~~~~~~~~~~~~~~",
       "~~~~~~~~~~~~~~~~",
@@ -78,11 +78,11 @@
       "~~~~~~~~~~~~~~~~",
       "~~~~~~~~~~~~~~~~",
       "~~~~~~~~~~~~~~~~",
-      "v~~~~~~~~~~~~~~v"
+      "U~~~~~~~~~~~~~~U"
     ],
     [
-      " v~~~~~~~~~~~~v ",
-      "v~~~~~~~~~~~~~~v",
+      " U~~~~~~~~~~~~U ",
+      "U~~~~~~~~~~~~~~U",
       "~~~~~~~~~~~~~~~~",
       "~~~~~~~~~~~~~~~~",
       "~~~~~~~~~~~~~~~~",
@@ -95,26 +95,26 @@
       "~~~~~~~~~~~~~~~~",
       "~~~~~~~~~~~~~~~~",
       "~~~~~~~~~~~~~~~~",
-      "v~~~~~~~~~~~~~~v",
-      " v~~~~~~~~~~~~v "
+      "U~~~~~~~~~~~~~~U",
+      " U~~~~~~~~~~~~U "
     ],
     [
-      "  vvvvvvvvvvvv  ",
-      "  vvvvvvvvvvvv  ",
-      "vvvvvvvvvvvvvvvv",
-      "vvvvvvvvvvvvvvvv",
-      "vvvvvvvvvvvvvvvv",
-      "vvvvvvvvvvvvvvvv",
-      "vvvvvvvvvvvvvvvv",
-      "vvvvvvvvvvvvvvvv",
-      "vvvvvvvvvvvvvvvv",
-      "vvvvvvvvvvvvvvvv",
-      "vvvvvvvvvvvvvvvv",
-      "vvvvvvvvvvvvvvvv",
-      "vvvvvvvvvvvvvvvv",
-      "vvvvvvvvvvvvvvvv",
-      "  vvvvvvvvvvvv  ",
-      "  vvvvvvvvvvvv  "
+      "  UUUUUUUUUUUU  ",
+      "  UUUUUUUUUUUU  ",
+      "UUUUUUUUUUUUUUUU",
+      "UUUUUUUUUUUUUUUU",
+      "UUUUUUUUUUUUUUUU",
+      "UUUUUUUUUUUUUUUU",
+      "UUUUUUUUUUUUUUUU",
+      "UUUUUUUUUUUUUUUU",
+      "UUUUUUUUUUUUUUUU",
+      "UUUUUUUUUUUUUUUU",
+      "UUUUUUUUUUUUUUUU",
+      "UUUUUUUUUUUUUUUU",
+      "UUUUUUUUUUUUUUUU",
+      "UUUUUUUUUUUUUUUU",
+      "  UUUUUUUUUUUU  ",
+      "  UUUUUUUUUUUU  "
     ]
   ]
 }
