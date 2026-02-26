@@ -1,9 +1,10 @@
 {
-  "name": "unified-materials",
+  "name": "waste",
   "license": "MIT",
   "private": "true",
   "author": "Dustin Heisey",
   "type": "module",
+  "version": "0.2.0"
   "scripts": {
     "format": "prettier . --write",
     "lint:types": "tsc --noEmit",
@@ -28,6 +29,5 @@
     "type-fest": "^5.4.4",
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.56.0"
-  },
-  "version": "1.0.0"
+  }
 }
