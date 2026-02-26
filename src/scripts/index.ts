@@ -89,61 +89,61 @@ bench(true, "Bench_Waste_Sorting")
   .description("Used to sort waste and find treasures amidst the refuse.")
   .build();
 
-// workbench(
-//   "Workbench_Bench_Waste_Sorting",
-//   "Workbench_Crafting",
-//   ["6x $Wood_Trunk", "6x $Rock"],
-//   "Bench_Waste_Sorting",
-//   14,
-// );
+workbench(
+  "Workbench_Bench_Waste_Sorting",
+  "Workbench_Crafting",
+  ["6x $Wood_Trunk", "6x $Rock"],
+  "Bench_Waste_Sorting",
+  14,
+);
 
-// furnace("Copper_Pipe")
-//   .input("Ingredient_Treasure_Copper_Pipe")
-//   .output("Ingredient_Bar_Copper")
-//   .time(14)
-//   .build();
+furnace("Copper_Pipe")
+  .input("Ingredient_Treasure_Copper_Pipe")
+  .output("Ingredient_Bar_Copper")
+  .time(14)
+  .build();
 
-// furnace("Electrical_Wire")
-//   .input("Ingredient_Treasure_Electrical_Wire")
-//   .output("Ingredient_Bar_Copper")
-//   .time(14)
-//   .build();
+furnace("Electrical_Wire")
+  .input("Ingredient_Treasure_Electrical_Wire")
+  .output("Ingredient_Bar_Copper")
+  .time(14)
+  .build();
 
-// furnace("Plumbing_Joint")
-//   .input("Ingredient_Treasure_Plumbing_Joint")
-//   .output("Ingredient_Bar_Iron")
-//   .time(14)
-//   .build();
+furnace("Plumbing_Joint")
+  .input("Ingredient_Treasure_Plumbing_Joint")
+  .output("Ingredient_Bar_Iron")
+  .time(14)
+  .build();
 
-// furnace("Tin_Foil")
-//   .input("Ingredient_Treasure_Tin_Foil")
-//   .output("Ingredient_Bar_Tin")
-//   .time(14)
-//   .build();
+furnace("Tin_Foil")
+  .input("Ingredient_Treasure_Tin_Foil")
+  .output("Ingredient_Bar_Tin")
+  .time(14)
+  .build();
 
-// salvage("Rag")
-//   .input("Ingredient_Treasure_Rag")
-//   .output("Ingredient_Fabric_Scrap_Linen")
-//   .time(4)
-//   .build();
-// salvage("Rope")
-//   .input("Ingredient_Treasure_Rope")
-//   .output("3x Ingredient_Fibre")
-//   .time(4)
-//   .build();
+salvage("Rag")
+  .input("Ingredient_Treasure_Rag")
+  .output("Ingredient_Fabric_Scrap_Linen")
+  .time(4)
+  .build();
+salvage("Rope")
+  .input("Ingredient_Treasure_Rope")
+  .output("3x Ingredient_Fibre")
+  .time(4)
+  .build();
 
-// sorting("Waste")
-//   .input("6x Ingredient_Waste_Waste")
-//   .output([
-//     "Ingredient_Treasure_Copper_Pipe",
-//     "Ingredient_Treasure_Electrical_Wire",
-//     "Ingredient_Treasure_Tin_Foil",
-//     "Ingredient_Treasure_Plumbing_Joint",
-//     "Ingredient_Treasure_Rag",
-//     "Ingredient_Treasure_Rope",
-//   ])
-//   .time(4)
-//   .build();
+sorting("Waste")
+  .input("6x Ingredient_Waste_Waste")
+  .output([
+    "Ingredient_Treasure_Copper_Pipe",
+    "Ingredient_Treasure_Electrical_Wire",
+    "Ingredient_Treasure_Tin_Foil",
+    "Ingredient_Treasure_Plumbing_Joint",
+    "Ingredient_Treasure_Rag",
+    "Ingredient_Treasure_Rope",
+  ])
+  .time(4)
+  .build();
 
 blockSet("Waste").includeBlockTypes(["Waste_Block*"]).build();
 hitbox("Bench_Waste_Sorting").build();

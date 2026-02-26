@@ -92,7 +92,7 @@ export class SalvageRecipeBuilder {
       `${outDir}/Server/Item/Recipes/Salvage/Salvage_${id}`,
       toPascal({
         input,
-        primaryOutput: primaryOutput,
+        primaryOutput: primaryOutput ?? output[0],
         output,
         benchRequirement: [
           {
