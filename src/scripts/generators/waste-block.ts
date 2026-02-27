@@ -220,7 +220,7 @@ class WasteBlockBuilder {
    * @returns The builder instance for chaining
    */
   transition(): this {
-    this.config.transitionTexture = `BlockTextures/Transition_Waste_Block_${this.config.id}.png`;
+    this.config.transitionTexture = `BlockTextures/Waste/Transition_Waste_Block_${this.config.id}.png`;
     this.config.transitionToGroups = ["Stone", "Lava", "Dirt"];
     return this;
   }
@@ -307,7 +307,7 @@ class WasteBlockBuilder {
           name: `server.items.${modId}.Waste_Block_${id}.name`,
           description: `server.items.${modId}.Waste_Block_${id}.description`,
         },
-        categories: [...(categories ?? ""), `Waste.Waste`],
+        categories: [...(categories ?? ""), `Waste.Wastes`],
         playerAnimationsId: "Block" as const,
         quality: quality ?? "Common",
         blockType: {
@@ -318,8 +318,8 @@ class WasteBlockBuilder {
           gathering: {
             breaking: {
               gatherType: gatherType ?? "Rocks",
-              ...(dropQuality ? {quality: dropQuality}: {}),
-              ...(dropQuantity ? {quantity: dropQuantity}:{}),
+              ...(dropQuality ? { quality: dropQuality } : {}),
+              ...(dropQuantity ? { quantity: dropQuantity } : {}),
               itemId: drop ?? "Ingredient_Waste_Waste",
             },
           },
@@ -328,16 +328,16 @@ class WasteBlockBuilder {
             all: `BlockTextures/${texture}_${(index++).toString()}.png`,
           })) ?? [
             {
-              all: `BlockTextures/Waste_Block_${id}_1.png`,
+              all: `BlockTextures/Waste/Waste_Block_${id}_1.png`,
             },
             {
-              all: `BlockTextures/Waste_Block_${id}_2.png`,
+              all: `BlockTextures/Waste/Waste_Block_${id}_2.png`,
             },
             {
-              all: `BlockTextures/Waste_Block_${id}_3.png`,
+              all: `BlockTextures/Waste/Waste_Block_${id}_3.png`,
             },
             {
-              all: `BlockTextures/Waste_Block_${id}_4.png`,
+              all: `BlockTextures/Waste/Waste_Block_${id}_4.png`,
             },
           ],
           particleColor: color ?? "#3d3e3e",
