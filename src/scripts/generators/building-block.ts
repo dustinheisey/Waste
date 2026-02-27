@@ -1,5 +1,6 @@
 import {
   global,
+  resourceType,
   syncJson,
   syncLang,
   toPascal,
@@ -27,6 +28,7 @@ export interface BuildingBlockConfig {
   transitionToGroups?: string[];
   gatherType?: string;
   drop?: string;
+  resourceType?: string;
   set?: string;
   group?: string;
   particleSetId?: string;
@@ -243,6 +245,16 @@ class BuildingBlockBuilder {
   }
 
   /**
+   * Sets the resourceType for the item
+   * @param resourceType The resourceType
+   * @returns The builder instance for chaining
+   */
+  resourceType(resourceType: string): this {
+    this.config.resourceType = resourceType;
+    return this;
+  }
+
+  /**
    * Sets the blockset for the item
    * @param set The blockset
    * @returns The builder instance for chaining
@@ -311,6 +323,7 @@ class BuildingBlockBuilder {
       group,
       particleSetId,
       textureOverride,
+      resourceType,
       customModel,
       customModelTexture,
       gatherType,
@@ -365,6 +378,15 @@ class BuildingBlockBuilder {
         tags: {
           type: ["Rock"],
         },
+        ...(resourceType
+          ? {
+              resourceTypes: [
+                {
+                  id: resourceType,
+                },
+              ],
+            }
+          : {}),
         itemSoundSetId: "ISS_Blocks_Stone",
       }),
     );
