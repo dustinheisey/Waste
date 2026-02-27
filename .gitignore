@@ -39,6 +39,7 @@ node_modules
 src/main/resources
 tmp
 TODO.md
+curseforge
 
 ### Mac OS ###
 .DS_Store
