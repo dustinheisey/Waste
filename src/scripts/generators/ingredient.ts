@@ -251,7 +251,7 @@ class IngredientBuilder {
     syncLang([
       {
         key: `items.${modId}.Ingredient_${this.itemType}_${id}.name`,
-        value: name ?? (baseName ?? id.replace(/_/g, " ")),
+        value: name ?? baseName ?? id.replace(/_/g, " "),
       },
       ...(description
         ? [
@@ -279,6 +279,19 @@ export function waste(id: string): IngredientBuilder {
 }
 
 /**
+ * Director function that returns a new ScrapBuilder instance
+ * @param id
+ * @returns A new builder instance
+ * @example
+ * scrap("Scrap")
+ *   .color("#CCCCCC")
+ *   .build();
+ */
+export function scrap(id: string): IngredientBuilder {
+  return new IngredientBuilder(id, "Scrap");
+}
+
+/**
  * Director function that returns a new TreasureBuilder instance
  * @param id
  * @returns A new builder instance
@@ -300,16 +313,17 @@ export function treasure(id: string): IngredientBuilder {
 export function ingredients(
   configs: ItemInput[],
   icon: boolean,
+  categories: Tab[],
   func: (id: string) => IngredientBuilder,
 ): void {
   configs.forEach((config) => {
     if (typeof config === "string") {
       // Handle string input - infer name from ID
-      const builder = func(config).icon(icon);
+      const builder = func(config).icon(icon).categories(categories);
       builder.build();
     } else {
       // Handle object input - use provided config
-      const builder = func(config.id).icon(icon);
+      const builder = func(config.id).icon(icon).categories(categories);
 
       // Apply all properties from the config object
       Object.entries(config).forEach(([key, value]) => {
@@ -328,7 +342,15 @@ export function ingredients(
  * @param configs Array of waste configurations (strings or objects)
  */
 export function wastes(icon: boolean, configs: ItemInput[]): void {
-  ingredients(configs, icon, waste);
+  ingredients(configs, icon, ["Items.Ingredients", "Waste.Wastes"], waste);
+}
+
+/**
+ * Function to create multiple ingredients at once
+ * @param configs Array of waste configurations (strings or objects)
+ */
+export function scraps(icon: boolean, configs: ItemInput[]): void {
+  ingredients(configs, icon, ["Items.Ingredients", "Waste.Scraps"], scrap);
 }
 
 /**
@@ -336,5 +358,10 @@ export function wastes(icon: boolean, configs: ItemInput[]): void {
  * @param configs Array of treasure configurations (strings or objects)
  */
 export function treasures(icon: boolean, configs: ItemInput[]): void {
-  ingredients(configs, icon, treasure);
+  ingredients(
+    configs,
+    icon,
+    ["Items.Ingredients", "Waste.Treasures"],
+    treasure,
+  );
 }

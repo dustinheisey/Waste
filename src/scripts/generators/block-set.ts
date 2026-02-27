@@ -130,7 +130,7 @@ class BlockSetBuilder {
    * This method will sync the JSON file
    */
   build(): void {
-    const {outDir} = global();
+    const { outDir } = global();
     const {
       config: { id, ...blockSetConfig },
     } = this;

@@ -1,13 +1,26 @@
-import type { ItemData as BaseItemData, BlockTypes, CommonTypes, MaskVariant } from "hytale-generators";
-import { global, syncJson, syncLang, toPascal, type Tab } from "hytale-generators";
+import {
+  global,
+  resourceType,
+  syncJson,
+  syncLang,
+  toPascal,
+  type BlockTexture,
+  type Tab,
+} from "hytale-generators";
+import type {
+  CommonTypes,
+  ItemData as BaseItemData,
+  BlockTypes,
+  MaskVariant,
+} from "hytale-generators";
 
-export type WasteBlockData = Required<
+export type BuildingBlockData = Required<
   Pick<BaseItemData, CommonTypes | BlockTypes> & {
     PlayerAnimationsId: "Block";
   }
 >;
 
-export interface WasteBlockConfig {
+export interface BuildingBlockConfig {
   id: string;
   color: string;
   quality?: "Common" | "Uncommon" | "Rare" | "Epic" | "Legendary";
@@ -15,8 +28,11 @@ export interface WasteBlockConfig {
   transitionToGroups?: string[];
   gatherType?: string;
   drop?: string;
-  dropQuantity?: number;
-  dropQuality?: number;
+  resourceType?: string;
+  set?: string;
+  group?: string;
+  particleSetId?: string;
+  textureOverride?: BlockTexture[];
   icon?: boolean;
   name?: string;
   baseName?: string;
@@ -24,18 +40,21 @@ export interface WasteBlockConfig {
   categories?: Tab[];
   model?: string;
   mask?: string;
+  customModel?: string;
+  customModelTexture?: {
+    texture: string;
+    weight: number;
+  }[];
   maskVariant?: MaskVariant;
-  textures?: string[];
-  texture?: string;
   textureOut?: string;
   maxStack?: number;
   itemLevel?: number;
 }
 
-export type WasteBlockInput = string | WasteBlockConfig;
+export type BlockInput = string | BuildingBlockConfig;
 
-class WasteBlockBuilder {
-  protected config: Partial<WasteBlockConfig> = {};
+class BuildingBlockBuilder {
+  protected config: Partial<BuildingBlockConfig> = {};
 
   constructor(id: string) {
     this.config.id = id;
@@ -132,36 +151,6 @@ class WasteBlockBuilder {
   }
 
   /**
-   * Sets the texture for the item
-   * @param texture The texture path
-   * @returns The builder instance for chaining
-   */
-  texture(texture: string): this {
-    this.config.texture = texture;
-    return this;
-  }
-
-  /**
-   * Sets the textures for the item
-   * @param textures The textures path
-   * @returns The builder instance for chaining
-   */
-  textures(textures: string[]): this {
-    this.config.textures = textures;
-    return this;
-  }
-
-  /**
-   * Sets the output texture path for the item
-   * @param textureOut The output texture path
-   * @returns The builder instance for chaining
-   */
-  textureOut(textureOut: string): this {
-    this.config.textureOut = textureOut;
-    return this;
-  }
-
-  /**
    * Sets the maximum stack size for the item
    * @param maxStack The maximum stack size
    * @returns The builder instance for chaining
@@ -172,11 +161,34 @@ class WasteBlockBuilder {
   }
 
   /**
+   * Sets the custom model for the bench
+   * @param customModel The custom model path
+   * @returns The builder instance for chaining
+   */
+  customModel(customModel: string): this {
+    this.config.customModel = customModel;
+    return this;
+  }
+
+  /**
+   * Sets the custom model texture for the bench
+   * @param customModelTexture The custom model texture configuration
+   * @param texture
+   * @returns The builder instance for chaining
+   */
+  customModelTexture(texture: string): this {
+    this.config.customModelTexture = [{ texture, weight: 1 }];
+    return this;
+  }
+
+  /**
    * Sets the quality for the item
    * @param quality The quality level
    * @returns The builder instance for chaining
    */
-  quality(quality: "Common" | "Uncommon" | "Rare" | "Epic" | "Legendary"): this {
+  quality(
+    quality: "Common" | "Uncommon" | "Rare" | "Epic" | "Legendary",
+  ): this {
     this.config.quality = quality;
     return this;
   }
@@ -224,7 +236,7 @@ class WasteBlockBuilder {
 
   /**
    * Sets the drop for the item
-   * @param drop The drop level
+   * @param drop The drop
    * @returns The builder instance for chaining
    */
   drop(drop: string): this {
@@ -233,22 +245,52 @@ class WasteBlockBuilder {
   }
 
   /**
-   * Sets the dropQuantity for the item
-   * @param dropQuantity The dropQuantity level
+   * Sets the resourceType for the item
+   * @param resourceType The resourceType
    * @returns The builder instance for chaining
    */
-  dropQuantity(dropQuantity: number): this {
-    this.config.dropQuantity = dropQuantity;
+  resourceType(resourceType: string): this {
+    this.config.resourceType = resourceType;
     return this;
   }
 
   /**
-   * Sets the dropQuality for the item
-   * @param dropQuality The dropQuality level
+   * Sets the blockset for the item
+   * @param set The blockset
    * @returns The builder instance for chaining
    */
-  dropQuality(dropQuality: number): this {
-    this.config.dropQuality = dropQuality;
+  set(set: string): this {
+    this.config.set = set;
+    return this;
+  }
+
+  /**
+   * Sets the group for the item
+   * @param group The group
+   * @returns The builder instance for chaining
+   */
+  group(group: string): this {
+    this.config.group = group;
+    return this;
+  }
+
+  /**
+   * Sets the particleSetId for the item
+   * @param particleSetId The particleSetId
+   * @returns The builder instance for chaining
+   */
+  particleSetId(particleSetId: string): this {
+    this.config.particleSetId = particleSetId;
+    return this;
+  }
+
+  /**
+   * Sets the textureOverride for the item
+   * @param textureOverride The textureOverride
+   * @returns The builder instance for chaining
+   */
+  texture(textureOverride: BlockTexture[]): this {
+    this.config.textureOverride = textureOverride;
     return this;
   }
 
@@ -271,99 +313,97 @@ class WasteBlockBuilder {
     const {
       id,
       categories,
-      textures,
       icon,
       name,
       baseName,
       description,
       maxStack,
       color,
-      quality,
+      set,
+      group,
+      particleSetId,
+      textureOverride,
+      resourceType,
+      customModel,
+      customModelTexture,
       gatherType,
       transitionTexture,
       transitionToGroups,
-      drop,
-      dropQuality,
-      dropQuantity
-    } = this.config as WasteBlockConfig;
+    } = this.config as BuildingBlockConfig;
 
-    syncJson<WasteBlockData>(
-      `${outDir}/Server/Item/Items/Blocks/Waste/Waste_Block_${id}`,
+    syncJson<BuildingBlockData>(
+      `${outDir}/Server/Item/Items/Blocks/Building/${id}`,
       toPascal({
         translationProperties: {
-          name: `server.items.${modId}.Waste_Block_${id}.name`,
-          description: `server.items.${modId}.Waste_Block_${id}.description`
+          name: `server.items.${modId}.${id}.name`,
+          description: `server.items.${modId}.${id}.description`,
         },
-        categories: [...(categories ?? ""), `Waste.Wastes`],
+        itemLevel: 10,
+        maxStack: maxStack ?? 100,
+        ...(icon ? { icon: `Icons/ItemsGenerated/${id}.png` } : {}),
+        categories: [...(categories ?? ""), `Waste.Blocks`],
         playerAnimationsId: "Block" as const,
-        quality: quality ?? "Common",
+        ...(set ? { set } : {}),
         blockType: {
           material: "Solid" as const,
-          drawType: "Cube" as const,
-          group: "Waste",
+          drawType: customModel ? ("Model" as const) : ("Cube" as const),
+          ...(group ? { group } : {}),
+          ...(customModel ? { customModel } : {}),
+          ...(customModelTexture ? { customModelTexture } : {}),
           flags: {},
           gathering: {
             breaking: {
               gatherType: gatherType ?? "Rocks",
-              ...(dropQuality ? { quality: dropQuality } : {}),
-              ...(dropQuantity ? { quantity: dropQuantity } : {}),
-              itemId: drop ?? "Ingredient_Waste_Waste"
-            }
+            },
           },
-          blockParticleSetId: "Sand",
-          textures: textures?.map((texture, index) => ({
-            all: `BlockTextures/${texture}_${(index++).toString()}.png`
-          })) ?? [
-            {
-              all: `BlockTextures/Waste/Waste_Block_${id}_1.png`
-            },
-            {
-              all: `BlockTextures/Waste/Waste_Block_${id}_2.png`
-            },
-            {
-              all: `BlockTextures/Waste/Waste_Block_${id}_3.png`
-            },
-            {
-              all: `BlockTextures/Waste/Waste_Block_${id}_4.png`
-            }
-          ],
+          blockParticleSetId: particleSetId ?? "Stone",
+          ...(!customModel
+            ? {
+                textures: textureOverride ?? [
+                  {
+                    all: `BlockTextures/Building/${id}.png`,
+                  },
+                ],
+              }
+            : {}),
           particleColor: color ?? "#3d3e3e",
-          blockSoundSetId: "Gravel",
-          cubeShadingMode: "Flat",
+          blockSoundSetId: "Stone",
           ...(transitionTexture && transitionToGroups
             ? {
                 transitionTexture,
-                transitionToGroups
+                transitionToGroups,
               }
-            : {})
+            : {}),
         },
-        iconProperties: {
-          scale: 0.58823,
-          rotation: [22.5, 45, 22.5],
-          translation: [0, -13.5]
-        },
-        ...(icon ? { icon: `Icons/ItemsGenerated/Waste_Block_${id}.png` } : {}),
         tags: {
-          type: ["Waste"]
+          type: ["Rock"],
         },
-        maxStack: maxStack ?? 100,
-        itemSoundSetId: "ISS_Blocks_Soft"
-      })
+        ...(resourceType
+          ? {
+              resourceTypes: [
+                {
+                  id: resourceType,
+                },
+              ],
+            }
+          : {}),
+        itemSoundSetId: "ISS_Blocks_Stone",
+      }),
     );
 
     syncLang([
       {
-        key: `items.${modId}.Waste_Block_${id}.name`,
-        value: name ?? `${baseName ?? id.replace(/_/g, " ")} Waste Block`
+        key: `items.${modId}.${id}.name`,
+        value: name ?? `${baseName ?? id.replace(/_/g, " ")}`,
       },
       ...(description
         ? [
             {
-              key: `items.${modId}.Waste_Block_${id}.description`,
-              value: description
-            }
+              key: `items.${modId}.${id}.description`,
+              value: description,
+            },
           ]
-        : [])
+        : []),
     ]);
   }
 }
@@ -377,21 +417,21 @@ class WasteBlockBuilder {
  *   .color("#CCCCCC")
  *   .build();
  */
-export function wasteBlock(icon: boolean, id: string): WasteBlockBuilder {
-  return new WasteBlockBuilder(id).icon(icon);
+export function buildingBlock(icon: boolean, id: string): BuildingBlockBuilder {
+  return new BuildingBlockBuilder(id).icon(icon);
 }
 
 /**
  * Function to create multiple waste blocks at once
  * @param configs Array of waste configurations (strings or objects)
  */
-export function wasteBlocks(icon: boolean, configs: WasteBlockInput[]): void {
-  configs.forEach(config => {
+export function buildingBlocks(icon: boolean, configs: BlockInput[]): void {
+  configs.forEach((config) => {
     if (typeof config === "string") {
-      const builder = wasteBlock(icon, config);
+      const builder = buildingBlock(icon, config);
       builder.build();
     } else {
-      const builder = wasteBlock(icon, config.id);
+      const builder = buildingBlock(icon, config.id);
 
       Object.entries(config).forEach(([key, value]) => {
         if (key !== "id") {
