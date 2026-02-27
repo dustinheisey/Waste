@@ -13,7 +13,13 @@ setGlobal({ modId: "Waste", outDir: "../main/resources" });
 
 syncPublic();
 
-categories(["Wastes", "Treasures", "Materials", "Tools"]);
+categories([
+  "Wastes",
+  "Treasures",
+  { id: "Materials", icon: "Items-Ingredients" },
+  { id: "Tools", icon: "Bench" },
+  "Blocks",
+]);
 
 generateWasteBlocks();
 generateWastes();
@@ -23,4 +29,4 @@ generateBars();
 // generateScrap();
 generateTreasures();
 generateBenches();
-// generateBuildingBlocks();
+generateBuildingBlocks();
