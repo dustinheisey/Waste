@@ -21,7 +21,7 @@ hytale {
     manifest {
         Group = "Inconvenient"
         Name = "Waste"
-        Version = "0.3.0"
+        Version = "0.4.0"
         Description = "Turning trash into treasure"
         Authors = listOf(HytaleManifest.Author("Inconvenient Dev", "", "https://inconvenient.gg"))
         Website = "https://www.curseforge.com/hytale/mods/waste"
