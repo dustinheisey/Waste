@@ -47,8 +47,17 @@ export const wasteBlock = builder({
         material: "Solid" as const,
         drawType: model ? ("Model" as const) : ("Cube" as const),
         ...(group ? { group } : {}),
-        ...(model ? { model } : {}),
-        ...(texture ? { texture } : {}),
+        ...(model ? { customModel: `${model}.blockymodel` } : {}),
+        ...(texture
+          ? {
+              customModelTexture: [
+                {
+                  Texture: `${texture}.png`,
+                  Weight: 1
+                }
+              ]
+            }
+          : {}),
         flags: {},
         gathering: {
           breaking: {

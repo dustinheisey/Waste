@@ -1,19 +1,27 @@
-import {setGlobal, syncPublic} from "hytale-generators";
-import {registerCategories} from "./collections/categories.ts";
-import {registerBenches} from "./collections/benches.ts";
-import {registerBuildingBlocks} from "./collections/building.ts";
-import {registerFibers} from "./collections/fibers.ts";
-import {registerMetals} from "./collections/metals.ts";
-import {registerTreasures} from "./collections/treasures.ts";
-import {registerWastes} from "./collections/waste.ts";
+import { setGlobal, syncPublic } from "hytale-generators";
+import { registerBars } from "./collections/bars.ts";
+import { registerBenches } from "./collections/benches.ts";
+import { registerBlocks } from "./collections/blocks.ts";
+import { registerCategories } from "./collections/categories.ts";
+import { registerDusts } from "./collections/dusts.ts";
+import { registerScraps } from "./collections/scraps.ts";
+import { registerTreasures } from "./collections/treasures.ts";
+import { registerWasteBlocks } from "./collections/waste-blocks.ts";
+import { registerWastes } from "./collections/wastes.ts";
 
-setGlobal({modId: "Waste", outDir: "../main/resources"});
+setGlobal({
+  modId: "Waste",
+  outDir: "../main/resources"
+});
+
 syncPublic();
 
 registerCategories();
-registerBenches();
-registerBuildingBlocks();
-registerFibers();
-registerMetals();
-registerTreasures();
+registerWasteBlocks();
 registerWastes();
+registerScraps();
+registerTreasures();
+registerDusts();
+registerBars();
+registerBenches();
+registerBlocks();
