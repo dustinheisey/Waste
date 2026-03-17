@@ -4,13 +4,12 @@
   "private": "true",
   "author": "Dustin Heisey",
   "type": "module",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "scripts": {
     "format": "prettier . --write",
     "lint": "tsc --noEmit && eslint . --fix",
-    "clean": "rimraf dist, resources",
-    "build": "npm run clean && cd src/scripts && node ./index.ts",
-    "test": "npm run clean & cd src/scripts && node --experimental-strip-types ./test.ts"
+    "clean": "rimraf main/resources",
+    "build": "npm run clean && cd src/scripts && node ./index.ts"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",

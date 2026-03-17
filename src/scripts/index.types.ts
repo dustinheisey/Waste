@@ -1,15 +1,20 @@
 // eslint-disable @typescript-eslint/no-non-null-assertion
-import type {
-  AlchemyCfg,
-  BuilderRecipeCfg,
-  Flatten,
-  FurnaceRecipeCfg,
-  HasId,
-  NoId,
-  SalvageRecipeCfg,
-  WorkbenchCfg
+import {
+  alchemy,
+  builders,
+  flatten,
+  furnace,
+  salvage,
+  workbench,
+  type AlchemyCfg,
+  type BuilderRecipeCfg,
+  type Flatten,
+  type FurnaceRecipeCfg,
+  type HasId,
+  type NoId,
+  type SalvageRecipeCfg,
+  type WorkbenchCfg
 } from "hytale-generators";
-import { alchemy, builders, flatten, furnace, salvage } from "hytale-generators";
 import type { SetOptional } from "type-fest";
 import type { SortingRecipeCfg } from "./generators/sorting.ts";
 import { sorting } from "./generators/sorting.ts";
@@ -93,6 +98,7 @@ export function recipes<T extends RecipeItem>(prefix: string, cfgs: Flatten<T>) 
   };
 
   for (const cfg of cfgsFlat) {
+    if (cfg.workbench) grouped.workbench.push(recipeData.workbench(prefix, cfg));
     if (cfg.salvage) grouped.salvage.push(recipeData.salvage(prefix, cfg));
     if (cfg.furnace) grouped.furnace.push(recipeData.furnace(prefix, cfg));
     if (cfg.sorting) grouped.sorting.push(recipeData.sorting(prefix, cfg));
@@ -100,6 +106,7 @@ export function recipes<T extends RecipeItem>(prefix: string, cfgs: Flatten<T>) 
     if (cfg.builders) grouped.builders.push(recipeData.builders(prefix, cfg));
   }
 
+  if (grouped.workbench.length) workbench.many(grouped.workbench).build();
   if (grouped.salvage.length) salvage.many(grouped.salvage).build();
   if (grouped.furnace.length) furnace.many(grouped.furnace).build();
   if (grouped.sorting.length) sorting.many(grouped.sorting).build();

@@ -15,7 +15,8 @@ const benches: Cfg<BenchCfg & { hitbox: number[] } & HasRecipes<"workbench">> = 
       hitbox: [0, 1],
       icon: true,
       workbench: {
-        input: ["6x $Wood_Trunk", "6x $Rock"]
+        input: ["6x $Wood_Trunk", "6x $Rock"],
+        categories: ["Workbench_Crafting"],
       }
     }
   ]
