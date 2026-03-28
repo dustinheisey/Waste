@@ -8,7 +8,7 @@
   "scripts": {
     "format": "prettier . --write",
     "lint": "tsc --noEmit && eslint . --fix",
-    "clean": "rimraf dist, resources",
+    "clean": "rimraf ./src/main/resources",
     "build": "npm run clean && cd src/scripts && node ./index.ts",
     "test": "npm run clean & cd src/scripts && node --experimental-strip-types ./test.ts"
   },

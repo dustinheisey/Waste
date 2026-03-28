@@ -7,17 +7,15 @@ export default defineConfig(
   {
     files: ["**/*.ts"],
     extends: [eslint.configs.recommended, tseslint.configs.strictTypeChecked],
-    rules: {
-      "@typescript-eslint/no-empty-object-type": "off",
-      "@typescript-eslint/no-misused-spread": "off"
-    }
-  },
-  {
     languageOptions: {
       parserOptions: {
         projectService: true,
         tsconfigRootDir: import.meta.dirname
       }
+    },
+    rules: {
+      "@typescript-eslint/no-empty-object-type": "off",
+      "@typescript-eslint/no-misused-spread": "off"
     }
   },
   prettier

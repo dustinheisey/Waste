@@ -1,15 +1,19 @@
 // eslint-disable @typescript-eslint/no-non-null-assertion
-import type {
-  AlchemyCfg,
-  BuilderRecipeCfg,
-  Flatten,
-  FurnaceRecipeCfg,
-  HasId,
-  NoId,
-  SalvageRecipeCfg,
-  WorkbenchCfg
+import {
+  alchemy,
+  builders,
+  flatten,
+  furnace,
+  salvage,
+  type AlchemyCfg,
+  type BuilderRecipeCfg,
+  type Flatten,
+  type FurnaceRecipeCfg,
+  type HasId,
+  type NoId,
+  type SalvageRecipeCfg,
+  type WorkbenchCfg
 } from "hytale-generators";
-import { alchemy, builders, flatten, furnace, salvage } from "hytale-generators";
 import type { SetOptional } from "type-fest";
 import type { SortingRecipeCfg } from "./generators/sorting.ts";
 import { sorting } from "./generators/sorting.ts";
@@ -111,3 +115,5 @@ export const hasId = <T extends { id?: string }>(value: T): value is T & { id: s
 
 export const hasColor = <T extends { color?: string }>(value: T): value is T & { color: string } =>
   typeof value.color === "string";
+
+
