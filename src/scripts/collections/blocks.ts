@@ -3,6 +3,7 @@ import {
   type BlockSetCfg,
   buildingBlock,
   type BuildingBlockCfg,
+  colors,
   type Flatten,
   palette,
   resourceType,
@@ -15,8 +16,9 @@ export const registerBlocks = () => {
   const resourceTypes: Flatten<BlockSetCfg & ResourceTypeCfg> = [
     { id: "Plastic", includeBlockTypes: [`Block_Plastic*`, `Bricks_Plastic*`] },
     { id: "Fabric", includeBlockTypes: [`Block_Fabric*`, `Bricks_Fabric*`] },
-    { id: "Refractory", includeBlockTypes: [`Block_Refractory*`, `Bricks_Refractory*`] },
-    { id: "High_Refractory", includeBlockTypes: [`Block_High_Refractory*`, `Bricks_High_Refractory*`] }
+    { id: "Refractory", includeBlockTypes: [`Stone_Refractory*`, `Bricks_Refractory*`] },
+    { id: "High_Refractory", includeBlockTypes: [`Stone_High_Refractory*`, `Bricks_High_Refractory*`] },
+    { id: "Porcelain", includeBlockTypes: [`Stone_Porcelain*`, `Bricks_Porcelain*`] }
   ];
 
   const blocks: Cfg<BuildingBlockCfg & HasRecipes<"builders" | "alchemy" | "furnace">> = {
@@ -85,6 +87,13 @@ export const registerBlocks = () => {
         furnace: { output: "Ingredient_Bar_High_Refractory_Brick" }
       },
       {
+        id: "Soil_Clay_Porcelain",
+        name: "Porcelain Clay",
+        color: "#742729",
+        resourceType: "Soils",
+        furnace: { output: "Ingredient_Bar_High_Refractory_Brick" }
+      },
+      {
         id: "Stone_Refractory",
         name: "Refractory Stone",
         color: "#742729",
@@ -98,6 +107,22 @@ export const registerBlocks = () => {
         resourceType: "Refractorys",
         builders: { input: "$Refractorys", output: `Bricks_Refractory` }
       },
+      ...colors.flatMap(color => [
+        {
+          id: `Stone_Refractory_${color}`,
+          name: `${color} Refractory Stone`,
+          color: "#742729",
+          resourceType: "Refractorys",
+          builders: { input: "$Refractorys", output: `Stone_Refractory_${color}` }
+        },
+        {
+          id: `Bricks_Refractory_${color}`,
+          name: `${color} Refractory Bricks`,
+          color: "#742729",
+          resourceType: "Refractorys",
+          builders: { input: "$Refractorys", output: `Bricks_Refractory_${color}` }
+        }
+      ]),
       {
         id: "Stone_High_Refractory",
         name: "High Refractory Stone",
@@ -125,8 +150,7 @@ export const registerBlocks = () => {
         color: "#742729",
         resourceType: "Porcelains",
         builders: { input: "$Porcelains", output: `Bricks_Porcelain` }
-      },
-      ...palette({ id: "Refractory", icon: true, include: ["colorBlocks", "colorBricks"] })
+      }
     ]
   };
 

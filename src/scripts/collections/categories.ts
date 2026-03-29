@@ -7,7 +7,7 @@ export const registerCategories = () => {
       "Wastes",
       "Scraps",
       "Treasures",
-      { id: "Materials", icon: "Items-Ingredients" },
+      { id: "Components", icon: "Items-Ingredients" },
       { id: "Tools", icon: "Bench" },
       "Blocks"
     ])

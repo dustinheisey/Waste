@@ -76,7 +76,8 @@ export const registerTreasures = () => {
         id: "Straw",
         salvage: { output: "2x Ingredient_Dust_Plastic" },
         furnace: { output: "Ingredient_Bar_Plastic" }
-      }
+      },
+      { id: "Softened_Plastic" }
     ],
     city: [
       {
@@ -107,6 +108,12 @@ export const registerTreasures = () => {
       {
         id: "Fabric_Scraps",
         furnace: { output: "Ingredient_Bar_Fabric" }
+      },
+      {
+        id: "Camera_Lens_Frame"
+      },
+      {
+        id: "Empty_Ink_Tube"
       }
     ],
     toxicWastes: [

@@ -67,7 +67,6 @@ export const registerWastes = () => {
           ]
         }
       }
-      // { id: "Glass", name: "Broken Glass", icon: false }
     ],
     toxicWastes: [
       {

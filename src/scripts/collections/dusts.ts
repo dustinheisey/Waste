@@ -5,7 +5,7 @@ import { hasColor, recipes, type Cfg, type HasRecipes } from "../index.types.ts"
 /** Registration for dusts */
 export const registerDusts = () => {
   const { dust } = materials([
-    { id: "Dust", defaults: { categories: ["Items.Ingredients", "Waste.Materials"], icon: true } }
+    { id: "Dust", defaults: { categories: ["Items.Ingredients", "Waste.Components"], icon: true } }
   ]);
 
   const dusts: Cfg<MaterialCfg & HasRecipes<"furnace" | "builders">> = {
@@ -17,7 +17,10 @@ export const registerDusts = () => {
       {
         id: "Tin",
         furnace: { input: "Ingredient_Dust_Tin", output: "Ingredient_Bar_Tin" }
-      }
+      },
+      { id: "Activated_Charcoal", icon: false, color: "#272727" },
+      { id: "Wet_activated_Charcoal", icon: false, color: "#262626" },
+      { id: "Charcoal", icon: false, color: "#2d2d2d" }
     ],
     patch: [
       {
@@ -41,7 +44,10 @@ export const registerDusts = () => {
         id: "Bronze",
         color: "#675035",
         furnace: { output: "Ingredient_Bar_Bronze" }
-      }
+      },
+      { id: "Salt", color: "#CECECC", icon: false },
+      { id: "Lime", color: "#A8968C", icon: false },
+      { id: "Flux", color: "#EBD8C1", icon: false }
     ],
     factory: [
       {

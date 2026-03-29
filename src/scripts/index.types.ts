@@ -1,11 +1,13 @@
 // eslint-disable @typescript-eslint/no-non-null-assertion
 import {
   alchemy,
+  armor,
   builders,
   flatten,
   furnace,
   salvage,
   type AlchemyCfg,
+  type ArmorCfg,
   type BuilderRecipeCfg,
   type Flatten,
   type FurnaceRecipeCfg,
@@ -25,6 +27,7 @@ type RecipeCfg = {
   workbench: SetOptional<NoId<WorkbenchCfg>, "output" | "time" | "categories">;
   salvage: SetOptional<NoId<SalvageRecipeCfg>, "input" | "time">;
   furnace: SetOptional<NoId<FurnaceRecipeCfg>, "input" | "time">;
+  armor: SetOptional<NoId<ArmorCfg>, "input" | "time">;
   sorting: SetOptional<NoId<SortingRecipeCfg>, "input" | "time">;
   alchemy: SetOptional<NoId<AlchemyCfg>, "input" | "time" | "categories">;
   builders: SetOptional<NoId<BuilderRecipeCfg>, "input">;
@@ -37,6 +40,7 @@ type RecipeData = {
   sorting: SortingRecipeCfg;
   alchemy: AlchemyCfg;
   builders: BuilderRecipeCfg;
+  armor: ArmorCfg;
 };
 type RecipeItem<K extends RecipeType = RecipeType> = HasId & HasRecipes<K>;
 export type HasRecipes<K extends keyof RecipeCfg = keyof RecipeCfg> = {
@@ -71,6 +75,13 @@ const recipeData: {
     output: item.furnace?.output ?? "",
     time: item.furnace?.time ?? 1
   }),
+  armor: (prefix, item) => ({
+    id: item.id,
+    categories: item.armor?.categories ?? ["Armor_Head"],
+    input: item.armor?.input ?? prefix + item.id,
+    output: item.armor?.output ?? "",
+    time: item.armor?.time ?? 1
+  }),
   alchemy: (prefix, item) => ({
     id: item.id,
     categories: item.alchemy?.categories ?? ["Alchemy_Potions_Misc"],
@@ -93,12 +104,14 @@ export function recipes<T extends RecipeItem>(prefix: string, cfgs: Flatten<T>) 
     furnace: [],
     sorting: [],
     alchemy: [],
-    builders: []
+    builders: [],
+    armor: []
   };
 
   for (const cfg of cfgsFlat) {
     if (cfg.salvage) grouped.salvage.push(recipeData.salvage(prefix, cfg));
     if (cfg.furnace) grouped.furnace.push(recipeData.furnace(prefix, cfg));
+    if (cfg.armor) grouped.armor.push(recipeData.armor(prefix, cfg));
     if (cfg.sorting) grouped.sorting.push(recipeData.sorting(prefix, cfg));
     if (cfg.alchemy) grouped.alchemy.push(recipeData.alchemy(prefix, cfg));
     if (cfg.builders) grouped.builders.push(recipeData.builders(prefix, cfg));
@@ -106,6 +119,7 @@ export function recipes<T extends RecipeItem>(prefix: string, cfgs: Flatten<T>) 
 
   if (grouped.salvage.length) salvage.many(grouped.salvage).build();
   if (grouped.furnace.length) furnace.many(grouped.furnace).build();
+  if (grouped.armor.length) armor.many(grouped.armor).build();
   if (grouped.sorting.length) sorting.many(grouped.sorting).build();
   if (grouped.alchemy.length) alchemy.many(grouped.alchemy).build();
   if (grouped.builders.length) builders.many(grouped.builders).build();
@@ -115,5 +129,3 @@ export const hasId = <T extends { id?: string }>(value: T): value is T & { id: s
 
 export const hasColor = <T extends { color?: string }>(value: T): value is T & { color: string } =>
   typeof value.color === "string";
-
-

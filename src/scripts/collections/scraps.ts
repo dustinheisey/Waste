@@ -45,7 +45,8 @@ export const registerScraps = () => {
           input: ["Ingredient_Scrap_Dirty_Rope", "Ingredient_Water_Essence"],
           output: "Ingredient_Treasure_Rope"
         }
-      }
+      },
+      { id: "Rotten_Brain", icon: false }
     ],
     patch: [
       {
@@ -55,12 +56,28 @@ export const registerScraps = () => {
           input: ["Ingredient_Scrap_Dirty_Water_Bottle", "Ingredient_Water_Essence"],
           output: "Ingredient_Treasure_Water_Bottle"
         }
+      },
+      {
+        id: "Broken_Plastic_Drum",
+        salvage: { output: "2x Ingredient_Treasure_Plastic_Clump" }
       }
     ],
     city: [
       {
         id: "Toy",
         salvage: { output: "2x Ingredient_Treasure_Fabric_Scraps" }
+      },
+      {
+        id: "Broken_Camera",
+        salvage: { output: "Ingredient_Treasure_Camera_Lense_Frame" }
+      },
+      {
+        id: "Printer_Ink",
+        alchemy: {
+          categories: ["Alchemy_Potions_Misc"],
+          input: ["Ingredient_Scrap_Printer_Ink", "Ingredient_Water_Essence"],
+          output: "Ingredient_Treasure_Empty_Ink_Tube"
+        }
       }
     ],
     toxicWastes: [

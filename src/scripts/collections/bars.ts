@@ -9,7 +9,7 @@ export const registerBars = () => {
     {
       id: "Bar",
       defaults: {
-        categories: ["Items.Ingredients", "Waste.Materials"],
+        categories: ["Items.Ingredients", "Waste.Components"],
         icon: true,
         model: "Resources/Materials/Ingot",
         resourceType: "Metal_Bars",
@@ -63,6 +63,10 @@ export const registerBars = () => {
         builders: {
           output: "Block_High_Refractory"
         }
+      },
+      {
+        id: "Porcelain_Brick",
+        color: "#f3f3f3"
       }
     ]
   };
