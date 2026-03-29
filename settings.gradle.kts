@@ -25,7 +25,7 @@ hytale {
         Description = "Turning trash into treasure"
         Authors = listOf(HytaleManifest.Author("Inconvenient Dev", "", "https://inconvenient.gg"))
         Website = "https://www.curseforge.com/hytale/mods/waste"
-        ServerVersion = "2026.02.19-1a311a592"
+        ServerVersion = "2026.03.26-89796e57b"
         Main = "gg.inconvenient.waste.Waste"
         IncludesAssetPack = false
     }
